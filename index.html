@@ -22,11 +22,8 @@
         <div class="gallery__controls">
           <button class="btn" id="prev" aria-label="Previous (←)">Prev</button>
           <button class="btn" id="next" aria-label="Next (→)">Next</button>
-          <button class="btn" id="openIndex" aria-label="Open index (I)">
-            <svg viewBox="0 0 24 24" aria-hidden="true" style="inline-size:1em; block-size:1em;">
-              <rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/>
-              <rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/>
-            </svg>
+          <button class="btn icon-btn" id="openIndex" aria-label="Open index (I)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>
           </button>
         </div>
         <figcaption id="caption" class="gallery__caption" aria-live="polite"></figcaption>
@@ -47,15 +44,17 @@
 
       <section id="page-cv" class="page" aria-labelledby="cv-title">
         <h1 id="cv-title">Curriculum Vitae</h1>
-        <div class="prose"><p>Replace this section with your CV content, or link out to an external CV page.</p></div>
+        <div class="prose">
+          <p>José Lara Menéndez josem.laramenendez@gmail.com Education: 2027 Master of Fine Arts, Painting and Drawing, Concordia University 2022 Bachelor in Fine Arts with Distinction, Painting and Drawing, Concordia University 2017 Diploma of Collegial Studies in Visual Arts, Dawson College Group Exhibition history: 2025 Fresh Paint / New Construction, Art Mûr, Montréal, QC 2025 Maureen X, Fonderie Darling, Montréal, QC 2024 Art Volt Collection Exhibition Launch, FOFA Gallery, Montréal, QC 2022 Friends of Friends, Hoy Gallery, Montréal, QC 2022 Ya Llegamos, Hoy Gallery, Montréal, QC 2022 Banquette, Afternoon Projects, Vancouver, BC 2022 Graduating Student Exhibition, FOFA Gallery, Montréal, QC 2021 ALMAS exhibit, Chimbites &amp; Plastique Famille, Montréal, QC 2021 Porthole, Somewhere Gallery, Montréal, QC 2020 HUMA-I-N, Rad Hourani, Montréal, QC 2020 VAV X FARR Unshelved, VAV Gallery, Concordia University, Montréal, QC 2018 Smelted, VAV Gallery, Concordia University, Montréal, QC Grants and Awards: 2025 SSHRC Canada Graduate Scholarship – Master’s (CGS-M) 2024 Dale and Nick Tedeschi Studio Scholarship 2024 Tom Hopkins Memorial Graduate Scholarship 2022 Canada Council for the Arts, Research and Creation Grant Collections: 2024 Art Volt Collection, Concordia University, Montréal, QC Commissions: 2022 Mural commission for Project 10, Montréal, QC 2020 Editorial illustration collaboration with Jorge Vallecillos for Deem Journal, Los Angeles, CA Mentorship: 2022 Art Volt Mentorship Program, Montréal, QC Publications: 2023 Trains Magazine, Issue 06, San Francisco, CA 2021 Murmurs, Queer Print Club, Montréal, QC 2020 Personal Delights: A Series of Favorite Artists, curated by Katherine Parthimos 2019 Sangre, Montréal, QC Residencies: 2018 Céline Bureau, Montréal,QC Work experience: 2025 TA Teacher assistant, Holly King, Concordia University</p>
+          <p>2024 (-) Art Volt, Montréal, QC Web &amp; Communications assistant 2024 Project 10 X Musée d’Art Contemporain de Montréal, Montréal, QC Support in silkscreen printing workshops and the installation of a group exhibition 2022-23 Machinerie des arts, Montréal, QC Assistant to the director 2022 Project 10, Montréal, QC Creation of a Narrative Drawing Workshop (Teen &amp; Young Adults)</p>
+        </div>
       </section>
 
       <section id="page-contact" class="page" aria-labelledby="contact-title">
         <h1 id="contact-title">Contact</h1>
         <div class="prose">
-          <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+          <p>Email: <a href="mailto:josem.laramenendez@gmail.com">josem.laramenendez@gmail.com</a></p>
           <p>Instagram: <a href="#" target="_blank" rel="noopener">Add link</a></p>
-          <p>If you prefer a form, you can embed a simple form service here.</p>
         </div>
       </section>
     </div>
@@ -67,22 +66,247 @@
     <div class="lightbox__hint">Wheel/Pinch to zoom · Drag to pan · Esc to close</div>
   </div>
 
-  <script id="artworks-data" type="application/json">{"Painting": [{"id": "sample-painting-1", "title": "Sample Painting 1", "year": "2024", "medium": "Oil on panel", "dimensions": "20×20 cm", "src": "assets/images/sample-painting-1.jpg", "caption": "Sample Painting 1, 2024 • Oil on panel • 20×20 cm"}], "Drawing": [{"id": "sample-drawing-1", "title": "Sample Drawing 1", "year": "2023", "medium": "Graphite on paper", "dimensions": "21×29.7 cm", "src": "assets/images/sample-drawing-1.jpg", "caption": "Sample Drawing 1, 2023 • Graphite on paper • 21×29.7 cm"}], "Ceramics": [{"id": "sample-ceramic-1", "title": "Sample Ceramic 1", "year": "2022", "medium": "Stoneware", "dimensions": "15×15×15 cm", "src": "assets/images/sample-ceramic-1.jpg", "caption": "Sample Ceramic 1, 2022 • Stoneware • 15×15×15 cm"}]}</script>
+  <script id="artworks-data" type="application/json">{
+  "Works": [
+    {
+      "id": "nan",
+      "title": "nan",
+      "year": "nan",
+      "medium": "nan",
+      "dimensions": "nan",
+      "src": "assets/images/nan",
+      "caption": "nan • nan • nan • nan"
+    }
+  ],
+  "Drawing": [
+    {
+      "id": "inquiring-about-the-right-mistakes",
+      "title": "Inquiring About the Right Mistakes",
+      "year": "2025.0",
+      "medium": "Coloring pencils and graphite on paper",
+      "dimensions": "11 x 14 inches",
+      "src": "assets/images/nan",
+      "caption": "Inquiring About the Right Mistakes • 2025.0 • Coloring pencils and graphite on paper • 11 x 14 inches"
+    },
+    {
+      "id": "growing-pains",
+      "title": "Growing Pains",
+      "year": "2025.0",
+      "medium": "Drawing on paper",
+      "dimensions": "11 x 14 inches",
+      "src": "assets/images/nan",
+      "caption": "Growing Pains • 2025.0 • Drawing on paper • 11 x 14 inches"
+    },
+    {
+      "id": "dreaming-of-sinkholes",
+      "title": "Dreaming of Sinkholes",
+      "year": "2024.0",
+      "medium": "Drawing on bristleboard",
+      "dimensions": "11 x 14 inches",
+      "src": "assets/images/nan",
+      "caption": "Dreaming of Sinkholes • 2024.0 • Drawing on bristleboard • 11 x 14 inches"
+    },
+    {
+      "id": "untitled-drawing",
+      "title": "Untitled (drawing)",
+      "year": "2022.0",
+      "medium": "Drawing on paper",
+      "dimensions": "9 x 12 inches",
+      "src": "assets/images/nan",
+      "caption": "Untitled (drawing) • 2022.0 • Drawing on paper • 9 x 12 inches"
+    },
+    {
+      "id": "calendar-buddy",
+      "title": "Calendar Buddy",
+      "year": "2020.0",
+      "medium": "Drawing on bristleboard",
+      "dimensions": "9 x 12 inches",
+      "src": "assets/images/nan",
+      "caption": "Calendar Buddy • 2020.0 • Drawing on bristleboard • 9 x 12 inches"
+    }
+  ],
+  "Painting": [
+    {
+      "id": "through-a-collar",
+      "title": "Through a Collar",
+      "year": "2025.0",
+      "medium": "Oil on canvas",
+      "dimensions": "36 x 30 inches",
+      "src": "assets/images/nan",
+      "caption": "Through a Collar • 2025.0 • Oil on canvas • 36 x 30 inches"
+    },
+    {
+      "id": "event-horizon",
+      "title": "Event Horizon",
+      "year": "2025.0",
+      "medium": "Oil on canvas",
+      "dimensions": "30 x 24 inches",
+      "src": "assets/images/nan",
+      "caption": "Event Horizon • 2025.0 • Oil on canvas • 30 x 24 inches"
+    },
+    {
+      "id": "sounds-of-the-early-morning",
+      "title": "Sounds of the Early Morning",
+      "year": "2025.0",
+      "medium": "Oil on canvas",
+      "dimensions": "22 x 28 inches",
+      "src": "assets/images/nan",
+      "caption": "Sounds of the Early Morning • 2025.0 • Oil on canvas • 22 x 28 inches"
+    },
+    {
+      "id": "glass-futures",
+      "title": "Glass Futures",
+      "year": "2025.0",
+      "medium": "Oil and wax on canvas",
+      "dimensions": "24 x 24 inches",
+      "src": "assets/images/nan",
+      "caption": "Glass Futures • 2025.0 • Oil and wax on canvas • 24 x 24 inches"
+    },
+    {
+      "id": "vortex-at-ease",
+      "title": "Vortex at Ease",
+      "year": "2025.0",
+      "medium": "Oil on canvas",
+      "dimensions": "3 x 4 feet or 36 x 48 inches",
+      "src": "assets/images/nan",
+      "caption": "Vortex at Ease • 2025.0 • Oil on canvas • 3 x 4 feet or 36 x 48 inches"
+    },
+    {
+      "id": "passive-psychokinesis",
+      "title": "Passive Psychokinesis",
+      "year": "2024.0",
+      "medium": "Oil on canvas",
+      "dimensions": "4 x 4 feet or 48 x 48 inches",
+      "src": "assets/images/nan",
+      "caption": "Passive Psychokinesis • 2024.0 • Oil on canvas • 4 x 4 feet or 48 x 48 inches"
+    },
+    {
+      "id": "sarah-s-crime",
+      "title": "Sarah's Crime",
+      "year": "2024.0",
+      "medium": "Oil on canvas",
+      "dimensions": "20 x 30 inches",
+      "src": "assets/images/nan",
+      "caption": "Sarah's Crime • 2024.0 • Oil on canvas • 20 x 30 inches"
+    },
+    {
+      "id": "gate-for-a-cryptic-welcome",
+      "title": "Gate for a Cryptic Welcome",
+      "year": "2024.0",
+      "medium": "Oil on canvas",
+      "dimensions": "3 x 3 feet or 36 x 36 inches",
+      "src": "assets/images/nan",
+      "caption": "Gate for a Cryptic Welcome • 2024.0 • Oil on canvas • 3 x 3 feet or 36 x 36 inches"
+    },
+    {
+      "id": "green-study",
+      "title": "Green study",
+      "year": "2024.0",
+      "medium": "Oil on canvas",
+      "dimensions": "12 x 12 inches",
+      "src": "assets/images/nan",
+      "caption": "Green study • 2024.0 • Oil on canvas • 12 x 12 inches"
+    },
+    {
+      "id": "ponders-and-wonders",
+      "title": "Ponders and Wonders",
+      "year": "2023.0",
+      "medium": "Oil on canvas",
+      "dimensions": "20 x 24 inches",
+      "src": "assets/images/nan",
+      "caption": "Ponders and Wonders • 2023.0 • Oil on canvas • 20 x 24 inches"
+    },
+    {
+      "id": "waiting-for-nothing",
+      "title": "Waiting For Nothing",
+      "year": "2023.0",
+      "medium": "Oil on canvas",
+      "dimensions": "12 x 14 inches",
+      "src": "assets/images/nan",
+      "caption": "Waiting For Nothing • 2023.0 • Oil on canvas • 12 x 14 inches"
+    },
+    {
+      "id": "skewphoria",
+      "title": "Skewphoria",
+      "year": "2023.0",
+      "medium": "Oil on canvas",
+      "dimensions": "24 x 30 inches",
+      "src": "assets/images/nan",
+      "caption": "Skewphoria • 2023.0 • Oil on canvas • 24 x 30 inches"
+    },
+    {
+      "id": "nitpicker",
+      "title": "Nitpicker",
+      "year": "2019.0",
+      "medium": "Oil on linen",
+      "dimensions": "24 x 30 inches",
+      "src": "assets/images/nan",
+      "caption": "Nitpicker • 2019.0 • Oil on linen • 24 x 30 inches"
+    },
+    {
+      "id": "friendly-reminder",
+      "title": "Friendly Reminder",
+      "year": "2018.0",
+      "medium": "Oil on canvas",
+      "dimensions": "40 x 60 inches",
+      "src": "assets/images/nan",
+      "caption": "Friendly Reminder • 2018.0 • Oil on canvas • 40 x 60 inches"
+    },
+    {
+      "id": "a-boy-and-their-favourite-meal",
+      "title": "A Boy and Their Favourite Meal",
+      "year": "2018.0",
+      "medium": "Oil on canvas",
+      "dimensions": "48 x 48 inches",
+      "src": "assets/images/nan",
+      "caption": "A Boy and Their Favourite Meal • 2018.0 • Oil on canvas • 48 x 48 inches"
+    },
+    {
+      "id": "beer-boy",
+      "title": "Beer Boy",
+      "year": "2018.0",
+      "medium": "Oil on canvas",
+      "dimensions": "18 x 24 inches",
+      "src": "assets/images/nan",
+      "caption": "Beer Boy • 2018.0 • Oil on canvas • 18 x 24 inches"
+    }
+  ],
+  "Ceramics": [
+    {
+      "id": "coy-boy",
+      "title": "Coy Boy",
+      "year": "2022.0",
+      "medium": "Terracotta ceramics",
+      "dimensions": "13.5 x 8.5 x 9 inches",
+      "src": "assets/images/nan",
+      "caption": "Coy Boy • 2022.0 • Terracotta ceramics • 13.5 x 8.5 x 9 inches"
+    }
+  ]
+}</script>
 
   <script>
   (function(){
     const YEAR = new Date().getFullYear(); document.getElementById('year').textContent = YEAR;
 
-    const DATA = JSON.parse(document.getElementById('artworks-data').textContent || '{}');
-    let currentCat = Object.keys(DATA)[0] || null;
-    let currentIndex = 0;
+    // Data: inline first, then fallback to artworks.json
+    let RAW = {};
+    try {
+      const t = document.getElementById('artworks-data')?.textContent?.trim();
+      if (t && t !== '{}' && t !== '[]') RAW = JSON.parse(t);
+    } catch(e){}
+    async function ensureData(){
+      if (Object.keys(RAW).length) return RAW;
+      try { const r = await fetch('artworks.json', {cache:'no-store'}); if(r.ok) RAW = await r.json(); } catch(e){}
+      return RAW;
+    }
 
+    let currentCat = null, currentIndex = 0;
     const sidebar = document.getElementById('sidebar');
     const navSections = document.getElementById('nav-sections');
     const imgEl = document.getElementById('image');
     const captionEl = document.getElementById('caption');
     const galleryEl = document.getElementById('gallery');
-    const pageIndex = document.getElementById('page-index');
+    const indexPage = document.getElementById('page-index');
     const indexGridPage = document.getElementById('indexGridPage');
     const pageAbout = document.getElementById('page-about');
     const pageCV = document.getElementById('page-cv');
@@ -90,14 +314,14 @@
 
     function showGallery(){
       galleryEl.style.display = '';
-      pageIndex.classList.remove('active');
+      indexPage.classList.remove('active');
       pageAbout.classList.remove('active');
       pageCV.classList.remove('active');
       pageContact.classList.remove('active');
     }
     function showPage(id){
       galleryEl.style.display = 'none';
-      pageIndex.classList.remove('active');
+      indexPage.classList.remove('active');
       pageAbout.classList.toggle('active', id==='about');
       pageCV.classList.toggle('active', id==='cv');
       pageContact.classList.toggle('active', id==='contact');
@@ -105,55 +329,36 @@
     function showIndexPage(){
       galleryEl.style.display = 'none';
       pageAbout.classList.remove('active'); pageCV.classList.remove('active'); pageContact.classList.remove('active');
-      pageIndex.classList.add('active'); buildIndexPage();
+      indexPage.classList.add('active');
+      buildIndexPage(window.__DATA);
     }
 
-    function buildNav(){
-      navSections.innerHTML = '';
-      const detailsNodes = [];
-      Object.keys(DATA).forEach(cat=>{
-        const details = document.createElement('details'); details.className='nav-section'; if(cat===currentCat) details.open = true;
-        const summary = document.createElement('summary'); summary.className='nav-section__summary'; summary.textContent = cat; details.appendChild(summary);
-        const ul = document.createElement('ul'); ul.className='nav-section__list';
-        (DATA[cat]||[]).forEach((item, idx)=>{
-          const li = document.createElement('li');
-          const btn = document.createElement('button'); btn.className='nav-item-btn'; btn.type='button';
-          btn.textContent = item.title || '(Untitled)'; btn.setAttribute('data-cat',cat); btn.setAttribute('data-index', String(idx));
-          btn.addEventListener('click', ()=> select(cat, idx, true)); li.appendChild(btn); ul.appendChild(li);
-        });
-        details.appendChild(ul);
-        details.addEventListener('toggle', ()=>{ if(details.open) detailsNodes.forEach(d=>{ if(d!==details) d.open=false; }); });
-        navSections.appendChild(details); detailsNodes.push(details);
-      });
-      const pagesBlock = document.createElement('div'); pagesBlock.className='nav-section';
-      [['About','about'], ['CV','cv'], ['Contact','contact']].forEach(([label,id])=>{
-        const a = document.createElement('a'); a.className='nav-section__summary'; a.textContent=label; a.href = '#/page/'+id; a.setAttribute('data-page', id); pagesBlock.appendChild(a);
-      });
-      navSections.appendChild(pagesBlock);
-      updateCurrentMarker();
-    }
-
-    function updateCurrentMarker(){
+    function updateCurrentMarker(DATA){
       document.querySelectorAll('[aria-current="true"]').forEach(el=>el.removeAttribute('aria-current'));
-      const active = document.querySelector('.nav-item-btn[data-cat="'+CSS.escape(currentCat||'')+'\"][data-index="'+currentIndex+'\"]');
+      const active = document.querySelector('.nav-item-btn[data-cat="'+CSS.escape(currentCat||'')+'"][data-index="'+currentIndex+'"]');
       if(active) active.setAttribute('aria-current','true');
       const m = location.hash.match(/^#\/page\/(about|cv|contact|index)$/i);
-      if(m){ const p = document.querySelector('a.nav-section__summary[data-page="'+m[1].toLowerCase()+'\"]'); if(p) p.setAttribute('aria-current','true'); }
+      if(m){ const p = document.querySelector('a.nav-section__summary[data-page="'+m[1].toLowerCase()+'"]'); if(p) p.setAttribute('aria-current','true'); }
     }
 
-    function render(){
-      const list = DATA[currentCat]||[]; const item = list[currentIndex]; if(!item) return;
+    function render(DATA){
+      const list = (DATA[currentCat]||[]); const item = list[currentIndex];
+      if(!item) return;
       showGallery();
-      imgEl.style.opacity = 0.001; const onLoad = ()=>{ imgEl.style.transition='opacity .2s ease'; requestAnimationFrame(()=> imgEl.style.opacity=1); imgEl.removeEventListener('load', onLoad); };
+      imgEl.style.opacity = 0.001;
+      const onLoad = ()=>{ imgEl.style.transition='opacity .2s ease'; requestAnimationFrame(()=> imgEl.style.opacity=1); imgEl.removeEventListener('load', onLoad); };
       imgEl.addEventListener('load', onLoad, {once:true});
-      imgEl.src = item.src||''; imgEl.alt=item.title||'Artwork'; captionEl.textContent = item.caption||item.title||'';
-      const slug = item.id || String(currentIndex); const hash = '#/'+encodeURIComponent(currentCat)+'/'+encodeURIComponent(slug);
+      imgEl.src = item.src||''; imgEl.alt=item.title||'Artwork';
+      captionEl.textContent = item.caption || item.title || '';
+      const slug = item.id || String(currentIndex);
+      const hash = '#/'+encodeURIComponent(currentCat)+'/'+encodeURIComponent(slug);
       if(location.hash !== hash) location.hash = hash;
-      updateCurrentMarker();
-      const nextItem = list[(currentIndex+1)%Math.max(list.length,1)]; if(nextItem && nextItem.src){ const pre = new Image(); pre.src = nextItem.src; }
+      updateCurrentMarker(DATA);
+      const nextItem = list[(currentIndex+1)%Math.max(list.length,1)];
+      if(nextItem && nextItem.src){ const pre = new Image(); pre.src = nextItem.src; }
     }
 
-    function buildIndexPage(){
+    function buildIndexPage(DATA){
       indexGridPage.innerHTML = '';
       const list = DATA[currentCat] || [];
       list.forEach((item, idx)=>{
@@ -161,33 +366,33 @@
         const img = document.createElement('img'); img.src=item.src||''; img.alt=item.title||'Artwork';
         const label = document.createElement('div'); label.className='index-card__label'; label.textContent=item.title||'(Untitled)';
         card.appendChild(img); card.appendChild(label);
-        card.addEventListener('click', ()=>{ select(currentCat, idx, true); window.scrollTo({top:0, behavior:'smooth'}); });
+        card.addEventListener('click', ()=>{ select(DATA, currentCat, idx, true); window.scrollTo({top:0, behavior:'smooth'}); });
         indexGridPage.appendChild(card);
       });
     }
 
-    function select(cat, index, closeOnMobile){
-      currentCat=cat; currentIndex=index; render(); if(closeOnMobile && window.matchMedia('(max-width:900px)').matches) toggleMenu(false);
+    function select(DATA, cat, index, closeOnMobile){
+      currentCat = cat; currentIndex = index; render(DATA);
+      if(closeOnMobile && window.matchMedia('(max-width:900px)').matches) toggleMenu(false);
     }
-    function prev(){ const arr=DATA[currentCat]||[]; if(!arr.length) return; currentIndex=(currentIndex-1+arr.length)%arr.length; render(); }
-    function next(){ const arr=DATA[currentCat]||[]; if(!arr.length) return; currentIndex=(currentIndex+1)%arr.length; render(); }
+    function prev(DATA){ const arr=(DATA[currentCat]||[]); if(!arr.length) return; currentIndex=(currentIndex-1+arr.length)%arr.length; render(DATA); }
+    function next(DATA){ const arr=(DATA[currentCat]||[]); if(!arr.length) return; currentIndex=(currentIndex+1)%arr.length; render(DATA); }
 
-    document.getElementById('prev').addEventListener('click', prev);
-    document.getElementById('next').addEventListener('click', next);
+    document.getElementById('prev').addEventListener('click', ()=>prev(window.__DATA));
+    document.getElementById('next').addEventListener('click', ()=>next(window.__DATA));
     document.getElementById('openIndex').addEventListener('click', ()=>{ location.hash = '#/page/index'; });
+    window.addEventListener('keydown', (e)=>{ if(e.key==='ArrowLeft') prev(window.__DATA); else if(e.key==='ArrowRight') next(window.__DATA); else if(e.key==='Escape') { closeLightbox(); toggleMenu(false); } else if(e.key.toLowerCase()==='i') location.hash='#/page/index'; });
 
-    window.addEventListener('keydown', (e)=>{ if(e.key==='ArrowLeft') prev(); else if(e.key==='ArrowRight') next(); else if(e.key==='Escape') { closeLightbox(); toggleMenu(false); } else if(e.key.toLowerCase()==='i') location.hash='#/page/index'; });
-
-    function initFromHash(){
-      const h=location.hash;
-      let m=h.match(/^#\/page\/(about|cv|contact|index)$/i);
+    function initFromHash(DATA){
+      const h = location.hash;
+      let m = h.match(/^#\/page\/(about|cv|contact|index)$/i);
       if(m){ if(m[1].toLowerCase()==='index') showIndexPage(); else showPage(m[1].toLowerCase()); return true; }
-      m=h.match(/^#\/(.+?)\/(.+)$/); if(!m) return false;
-      const cat=decodeURIComponent(m[1]); const slug=decodeURIComponent(m[2]); if(!DATA[cat]) return false;
-      const idx=(DATA[cat]||[]).findIndex(i=>i.id===slug); if(idx>=0){ currentCat=cat; currentIndex=idx; showGallery(); return true; }
+      m = h.match(/^#\/(.+?)\/(.+)$/); if(!m) return false;
+      const cat = decodeURIComponent(m[1]); const slug = decodeURIComponent(m[2]); if(!DATA[cat]) return false;
+      const idx = (DATA[cat]||[]).findIndex(i=>i.id===slug); if(idx>=0){ currentCat=cat; currentIndex=idx; showGallery(); return true; }
       return false;
     }
-    window.addEventListener('hashchange', ()=>{ initFromHash(); render(); });
+    window.addEventListener('hashchange', ()=>{ initFromHash(window.__DATA); render(window.__DATA); });
 
     function toggleMenu(force){
       const willOpen = typeof force==='boolean' ? force : !sidebar.classList.contains('open');
@@ -198,6 +403,7 @@
     }
     document.querySelector('.hamburger').addEventListener('click', ()=> toggleMenu());
 
+    // Lightbox
     const lb=document.getElementById('lightbox'); const lbImg=document.getElementById('lightbox-img'); const lbClose=document.getElementById('lightbox-close');
     let scale=1, originX=0, originY=0, isPanning=false, startX=0, startY=0;
     function openLightbox(){ const g=imgEl; lbImg.src=g.currentSrc||g.src; scale=1; originX=0; originY=0; applyTransform(); lb.classList.add('open'); lb.setAttribute('aria-hidden','false'); }
@@ -211,8 +417,38 @@
     lbClose.addEventListener('click', closeLightbox);
     imgEl.addEventListener('click', openLightbox);
 
-    buildNav();
-    if(!initFromHash()){ if(currentCat && (DATA[currentCat]||[]).length) select(currentCat, 0, false); } else { render(); }
+    (async function(){
+      const RAW_DATA = await ensureData();
+      const DATA = Object.fromEntries(Object.entries(RAW_DATA||{}).filter(([k]) => !/^all(\s*works?)?$/i.test(k||'')));
+      window.__DATA = DATA;
+      currentCat = Object.keys(DATA)[0] || null;
+
+      // Build nav
+      navSections.innerHTML = '';
+      const detailsNodes = [];
+      Object.keys(DATA).forEach(cat=>{
+        const details = document.createElement('details'); details.className='nav-section'; if(cat===currentCat) details.open = true;
+        const summary = document.createElement('summary'); summary.className='nav-section__summary'; summary.textContent = cat; details.appendChild(summary);
+        const ul = document.createElement('ul'); ul.className='nav-section__list';
+        (DATA[cat]||[]).forEach((item, idx)=>{
+          const li = document.createElement('li');
+          const btn = document.createElement('button'); btn.className='nav-item-btn'; btn.type='button';
+          btn.textContent = item.title || '(Untitled)'; btn.setAttribute('data-cat',cat); btn.setAttribute('data-index', String(idx));
+          btn.addEventListener('click', ()=> select(DATA, cat, idx, true)); li.appendChild(btn); ul.appendChild(li);
+        });
+        details.appendChild(ul);
+        details.addEventListener('toggle', ()=>{ if(details.open) detailsNodes.forEach(d=>{ if(d!==details) d.open=false; }); });
+        navSections.appendChild(details); detailsNodes.push(details);
+      });
+      const pagesBlock = document.createElement('div'); pagesBlock.className='nav-section';
+      [['About','about'], ['CV','cv'], ['Contact','contact']].forEach(([label,id])=>{
+        const a = document.createElement('a'); a.className='nav-section__summary'; a.textContent=label; a.href = '#/page/'+id; a.setAttribute('data-page', id); pagesBlock.appendChild(a);
+      });
+      navSections.appendChild(pagesBlock);
+
+      // First render
+      if(!initFromHash(DATA)){ if(currentCat && (DATA[currentCat]||[]).length) select(DATA, currentCat, 0, false); } else { render(DATA); }
+    })();
   })();
   </script>
 </body>
