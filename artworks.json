@@ -1,35 +1,217 @@
 {
-  "Painting": [
+  "Works": [
     {
-      "id": "sample-painting-1",
-      "title": "Sample Painting 1",
-      "year": "2024",
-      "medium": "Oil on panel",
-      "dimensions": "20×20 cm",
-      "src": "assets/images/sample-painting-1.jpg",
-      "caption": "Sample Painting 1, 2024 • Oil on panel • 20×20 cm"
+      "id": "nan",
+      "title": "nan",
+      "year": "nan",
+      "medium": "nan",
+      "dimensions": "nan",
+      "src": "assets/images/nan",
+      "caption": "nan • nan • nan • nan"
     }
   ],
   "Drawing": [
     {
-      "id": "sample-drawing-1",
-      "title": "Sample Drawing 1",
-      "year": "2023",
-      "medium": "Graphite on paper",
-      "dimensions": "21×29.7 cm",
-      "src": "assets/images/sample-drawing-1.jpg",
-      "caption": "Sample Drawing 1, 2023 • Graphite on paper • 21×29.7 cm"
+      "id": "inquiring-about-the-right-mistakes",
+      "title": "Inquiring About the Right Mistakes",
+      "year": "2025.0",
+      "medium": "Coloring pencils and graphite on paper",
+      "dimensions": "11 x 14 inches",
+      "src": "assets/images/nan",
+      "caption": "Inquiring About the Right Mistakes • 2025.0 • Coloring pencils and graphite on paper • 11 x 14 inches"
+    },
+    {
+      "id": "growing-pains",
+      "title": "Growing Pains",
+      "year": "2025.0",
+      "medium": "Drawing on paper",
+      "dimensions": "11 x 14 inches",
+      "src": "assets/images/nan",
+      "caption": "Growing Pains • 2025.0 • Drawing on paper • 11 x 14 inches"
+    },
+    {
+      "id": "dreaming-of-sinkholes",
+      "title": "Dreaming of Sinkholes",
+      "year": "2024.0",
+      "medium": "Drawing on bristleboard",
+      "dimensions": "11 x 14 inches",
+      "src": "assets/images/nan",
+      "caption": "Dreaming of Sinkholes • 2024.0 • Drawing on bristleboard • 11 x 14 inches"
+    },
+    {
+      "id": "untitled-drawing",
+      "title": "Untitled (drawing)",
+      "year": "2022.0",
+      "medium": "Drawing on paper",
+      "dimensions": "9 x 12 inches",
+      "src": "assets/images/nan",
+      "caption": "Untitled (drawing) • 2022.0 • Drawing on paper • 9 x 12 inches"
+    },
+    {
+      "id": "calendar-buddy",
+      "title": "Calendar Buddy",
+      "year": "2020.0",
+      "medium": "Drawing on bristleboard",
+      "dimensions": "9 x 12 inches",
+      "src": "assets/images/nan",
+      "caption": "Calendar Buddy • 2020.0 • Drawing on bristleboard • 9 x 12 inches"
+    }
+  ],
+  "Painting": [
+    {
+      "id": "through-a-collar",
+      "title": "Through a Collar",
+      "year": "2025.0",
+      "medium": "Oil on canvas",
+      "dimensions": "36 x 30 inches",
+      "src": "assets/images/nan",
+      "caption": "Through a Collar • 2025.0 • Oil on canvas • 36 x 30 inches"
+    },
+    {
+      "id": "event-horizon",
+      "title": "Event Horizon",
+      "year": "2025.0",
+      "medium": "Oil on canvas",
+      "dimensions": "30 x 24 inches",
+      "src": "assets/images/nan",
+      "caption": "Event Horizon • 2025.0 • Oil on canvas • 30 x 24 inches"
+    },
+    {
+      "id": "sounds-of-the-early-morning",
+      "title": "Sounds of the Early Morning",
+      "year": "2025.0",
+      "medium": "Oil on canvas",
+      "dimensions": "22 x 28 inches",
+      "src": "assets/images/nan",
+      "caption": "Sounds of the Early Morning • 2025.0 • Oil on canvas • 22 x 28 inches"
+    },
+    {
+      "id": "glass-futures",
+      "title": "Glass Futures",
+      "year": "2025.0",
+      "medium": "Oil and wax on canvas",
+      "dimensions": "24 x 24 inches",
+      "src": "assets/images/nan",
+      "caption": "Glass Futures • 2025.0 • Oil and wax on canvas • 24 x 24 inches"
+    },
+    {
+      "id": "vortex-at-ease",
+      "title": "Vortex at Ease",
+      "year": "2025.0",
+      "medium": "Oil on canvas",
+      "dimensions": "3 x 4 feet or 36 x 48 inches",
+      "src": "assets/images/nan",
+      "caption": "Vortex at Ease • 2025.0 • Oil on canvas • 3 x 4 feet or 36 x 48 inches"
+    },
+    {
+      "id": "passive-psychokinesis",
+      "title": "Passive Psychokinesis",
+      "year": "2024.0",
+      "medium": "Oil on canvas",
+      "dimensions": "4 x 4 feet or 48 x 48 inches",
+      "src": "assets/images/nan",
+      "caption": "Passive Psychokinesis • 2024.0 • Oil on canvas • 4 x 4 feet or 48 x 48 inches"
+    },
+    {
+      "id": "sarah-s-crime",
+      "title": "Sarah's Crime",
+      "year": "2024.0",
+      "medium": "Oil on canvas",
+      "dimensions": "20 x 30 inches",
+      "src": "assets/images/nan",
+      "caption": "Sarah's Crime • 2024.0 • Oil on canvas • 20 x 30 inches"
+    },
+    {
+      "id": "gate-for-a-cryptic-welcome",
+      "title": "Gate for a Cryptic Welcome",
+      "year": "2024.0",
+      "medium": "Oil on canvas",
+      "dimensions": "3 x 3 feet or 36 x 36 inches",
+      "src": "assets/images/nan",
+      "caption": "Gate for a Cryptic Welcome • 2024.0 • Oil on canvas • 3 x 3 feet or 36 x 36 inches"
+    },
+    {
+      "id": "green-study",
+      "title": "Green study",
+      "year": "2024.0",
+      "medium": "Oil on canvas",
+      "dimensions": "12 x 12 inches",
+      "src": "assets/images/nan",
+      "caption": "Green study • 2024.0 • Oil on canvas • 12 x 12 inches"
+    },
+    {
+      "id": "ponders-and-wonders",
+      "title": "Ponders and Wonders",
+      "year": "2023.0",
+      "medium": "Oil on canvas",
+      "dimensions": "20 x 24 inches",
+      "src": "assets/images/nan",
+      "caption": "Ponders and Wonders • 2023.0 • Oil on canvas • 20 x 24 inches"
+    },
+    {
+      "id": "waiting-for-nothing",
+      "title": "Waiting For Nothing",
+      "year": "2023.0",
+      "medium": "Oil on canvas",
+      "dimensions": "12 x 14 inches",
+      "src": "assets/images/nan",
+      "caption": "Waiting For Nothing • 2023.0 • Oil on canvas • 12 x 14 inches"
+    },
+    {
+      "id": "skewphoria",
+      "title": "Skewphoria",
+      "year": "2023.0",
+      "medium": "Oil on canvas",
+      "dimensions": "24 x 30 inches",
+      "src": "assets/images/nan",
+      "caption": "Skewphoria • 2023.0 • Oil on canvas • 24 x 30 inches"
+    },
+    {
+      "id": "nitpicker",
+      "title": "Nitpicker",
+      "year": "2019.0",
+      "medium": "Oil on linen",
+      "dimensions": "24 x 30 inches",
+      "src": "assets/images/nan",
+      "caption": "Nitpicker • 2019.0 • Oil on linen • 24 x 30 inches"
+    },
+    {
+      "id": "friendly-reminder",
+      "title": "Friendly Reminder",
+      "year": "2018.0",
+      "medium": "Oil on canvas",
+      "dimensions": "40 x 60 inches",
+      "src": "assets/images/nan",
+      "caption": "Friendly Reminder • 2018.0 • Oil on canvas • 40 x 60 inches"
+    },
+    {
+      "id": "a-boy-and-their-favourite-meal",
+      "title": "A Boy and Their Favourite Meal",
+      "year": "2018.0",
+      "medium": "Oil on canvas",
+      "dimensions": "48 x 48 inches",
+      "src": "assets/images/nan",
+      "caption": "A Boy and Their Favourite Meal • 2018.0 • Oil on canvas • 48 x 48 inches"
+    },
+    {
+      "id": "beer-boy",
+      "title": "Beer Boy",
+      "year": "2018.0",
+      "medium": "Oil on canvas",
+      "dimensions": "18 x 24 inches",
+      "src": "assets/images/nan",
+      "caption": "Beer Boy • 2018.0 • Oil on canvas • 18 x 24 inches"
     }
   ],
   "Ceramics": [
     {
-      "id": "sample-ceramic-1",
-      "title": "Sample Ceramic 1",
-      "year": "2022",
-      "medium": "Stoneware",
-      "dimensions": "15×15×15 cm",
-      "src": "assets/images/sample-ceramic-1.jpg",
-      "caption": "Sample Ceramic 1, 2022 • Stoneware • 15×15×15 cm"
+      "id": "coy-boy",
+      "title": "Coy Boy",
+      "year": "2022.0",
+      "medium": "Terracotta ceramics",
+      "dimensions": "13.5 x 8.5 x 9 inches",
+      "src": "assets/images/nan",
+      "caption": "Coy Boy • 2022.0 • Terracotta ceramics • 13.5 x 8.5 x 9 inches"
     }
   ]
 }
