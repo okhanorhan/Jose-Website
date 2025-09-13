@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>José Lara Menéndez – Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <button class="hamburger" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu">☰</button>
+  <nav id="sidebar" class="sidebar" role="navigation" aria-label="Main">
+    <div class="sidebar__header"><div class="logo" aria-hidden="true"></div></div>
+    <div class="sidebar__sections" id="nav-sections"></div>
+    <div class="sidebar__footer"><div>© <span id="year"></span></div><div style="margin-top:.25rem; font-size:.85rem; color:#999">Montréal, QC</div></div>
+  </nav>
+  <div id="backdrop" class="backdrop" hidden></div>
+
+  <main id="main">
+    <div class="container">
+      <figure id="gallery" class="gallery" aria-labelledby="caption" role="region">
+        <img id="image" class="gallery__img" src="" alt="Artwork" loading="eager" />
+        <div class="gallery__controls">
+          <button class="btn" id="prev" aria-label="Previous (←)">Prev</button>
+          <button class="btn" id="next" aria-label="Next (→)">Next</button>
+          <button class="btn" id="openIndex" aria-label="Open index (I)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" style="inline-size:1em; block-size:1em;">
+              <rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/>
+              <rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/>
+            </svg>
+          </button>
+        </div>
+        <figcaption id="caption" class="gallery__caption" aria-live="polite"></figcaption>
+      </figure>
+
+      <section id="page-index" class="index-page" aria-labelledby="index-title">
+        <h1 id="index-title" class="index-page__title" style="display:none">Index</h1>
+        <div id="indexGridPage" class="index-page__grid" aria-label="All artworks"></div>
+      </section>
+
+      <section id="page-about" class="page" aria-labelledby="about-title">
+        <h1 id="about-title">About</h1>
+        <div class="prose">
+          <p>Artist Bio José Lara Menéndez is a visual figurative artist who holds a Bachelors of Fine Arts from Concordia University (2022) and is now continuing their studies as an MFA candidate there. The artist creates surrealist dreamlike scenes featuring cartoon figures navigating otherworldly spaces. Menéndez is the recipient of the SSHRC Master’s program scholarship (2025), the Dale and Nick Tedeschi Studio Scholarship (2024), the Tom Hopkins Memorial Graduate Scholarship (2024), and the Research and Creation grant from the Canada Council for the Arts (2022). In 2022, they participated in the Art Volt mentorship program. Menéndez has exhibited their work across Montreal and Canada, and in 2024, joined the Art Volt Collection.</p>
+          <p>Artist Statement My practice delves into themes of identity, gender, alienation, and the dissonance of time. I explore these ideas through dreamlike compositions of ambiguous, liminal spaces to evoke a sense of eeriness and emotional states of transition, disorientation, and excavation. The figures I depict are caught between fictional characters and self-portraiture, suspended between past and future selves. They often appear in moments of pause or dislocation. Are they escaping, entering, regressing, or moving forward? The scenes, lit from unclear sources, omit a disjointed atmosphere and suggest alternate realities and paranormal states. Lingering hints of auras and vibrational light sources appear in my figures, insinuating an indistinguishable experience and a supra-sensorial expansion of the body to the outside world. Drawing on my interests in queer theory, particularly Jack Halberstam’s writing on queer failure and queer time, my work considers nonlinear queer temporality through elements reminiscent of structures of time such as surreally integrated calendars and depictions of spacetime. Through this, I strive to challenge colonial perspectives on gender and self-worth, the relentless pace of productivity culture, and the “hurry sickness” that distorts our sense of worth and presence, which often clashes with how I move through the world as a trans and autistic person of Guatemalan and Salvadoran heritage. I consider my works as portals into internal landscapes simultaneously shaped by gender dysphoria and gender euphoria. The combination of socio-cultural references and domestic elements in my compositions becomes a visual cue for psychological tensions. These references converge to reflect the environmental and social constraints I navigate under capitalism. These contradictions surface as ambiguous expressions, distorted environments, and temporal dissonance. Ultimately, my work carves out spaces of self-affirmation and different modes of being. Through the otherworldly, I aim to find a shared humanity of my personal experiences and to offer viewers glimpses into states of indeterminacy, resilience, and transformation.</p>
+        </div>
+      </section>
+
+      <section id="page-cv" class="page" aria-labelledby="cv-title">
+        <h1 id="cv-title">Curriculum Vitae</h1>
+        <div class="prose"><p>Replace this section with your CV content, or link out to an external CV page.</p></div>
+      </section>
+
+      <section id="page-contact" class="page" aria-labelledby="contact-title">
+        <h1 id="contact-title">Contact</h1>
+        <div class="prose">
+          <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+          <p>Instagram: <a href="#" target="_blank" rel="noopener">Add link</a></p>
+          <p>If you prefer a form, you can embed a simple form service here.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close (Esc)">Close</button>
+    <div class="lightbox__img-wrap"><img id="lightbox-img" class="lightbox__img" src="" alt="Artwork full view" /></div>
+    <div class="lightbox__hint">Wheel/Pinch to zoom · Drag to pan · Esc to close</div>
+  </div>
+
+  <script id="artworks-data" type="application/json">{"Painting": [{"id": "sample-painting-1", "title": "Sample Painting 1", "year": "2024", "medium": "Oil on panel", "dimensions": "20×20 cm", "src": "assets/images/sample-painting-1.jpg", "caption": "Sample Painting 1, 2024 • Oil on panel • 20×20 cm"}], "Drawing": [{"id": "sample-drawing-1", "title": "Sample Drawing 1", "year": "2023", "medium": "Graphite on paper", "dimensions": "21×29.7 cm", "src": "assets/images/sample-drawing-1.jpg", "caption": "Sample Drawing 1, 2023 • Graphite on paper • 21×29.7 cm"}], "Ceramics": [{"id": "sample-ceramic-1", "title": "Sample Ceramic 1", "year": "2022", "medium": "Stoneware", "dimensions": "15×15×15 cm", "src": "assets/images/sample-ceramic-1.jpg", "caption": "Sample Ceramic 1, 2022 • Stoneware • 15×15×15 cm"}]}</script>
+
+  <script>
+  (function(){
+    const YEAR = new Date().getFullYear(); document.getElementById('year').textContent = YEAR;
+
+    const DATA = JSON.parse(document.getElementById('artworks-data').textContent || '{}');
+    let currentCat = Object.keys(DATA)[0] || null;
+    let currentIndex = 0;
+
+    const sidebar = document.getElementById('sidebar');
+    const navSections = document.getElementById('nav-sections');
+    const imgEl = document.getElementById('image');
+    const captionEl = document.getElementById('caption');
+    const galleryEl = document.getElementById('gallery');
+    const pageIndex = document.getElementById('page-index');
+    const indexGridPage = document.getElementById('indexGridPage');
+    const pageAbout = document.getElementById('page-about');
+    const pageCV = document.getElementById('page-cv');
+    const pageContact = document.getElementById('page-contact');
+
+    function showGallery(){
+      galleryEl.style.display = '';
+      pageIndex.classList.remove('active');
+      pageAbout.classList.remove('active');
+      pageCV.classList.remove('active');
+      pageContact.classList.remove('active');
+    }
+    function showPage(id){
+      galleryEl.style.display = 'none';
+      pageIndex.classList.remove('active');
+      pageAbout.classList.toggle('active', id==='about');
+      pageCV.classList.toggle('active', id==='cv');
+      pageContact.classList.toggle('active', id==='contact');
+    }
+    function showIndexPage(){
+      galleryEl.style.display = 'none';
+      pageAbout.classList.remove('active'); pageCV.classList.remove('active'); pageContact.classList.remove('active');
+      pageIndex.classList.add('active'); buildIndexPage();
+    }
+
+    function buildNav(){
+      navSections.innerHTML = '';
+      const detailsNodes = [];
+      Object.keys(DATA).forEach(cat=>{
+        const details = document.createElement('details'); details.className='nav-section'; if(cat===currentCat) details.open = true;
+        const summary = document.createElement('summary'); summary.className='nav-section__summary'; summary.textContent = cat; details.appendChild(summary);
+        const ul = document.createElement('ul'); ul.className='nav-section__list';
+        (DATA[cat]||[]).forEach((item, idx)=>{
+          const li = document.createElement('li');
+          const btn = document.createElement('button'); btn.className='nav-item-btn'; btn.type='button';
+          btn.textContent = item.title || '(Untitled)'; btn.setAttribute('data-cat',cat); btn.setAttribute('data-index', String(idx));
+          btn.addEventListener('click', ()=> select(cat, idx, true)); li.appendChild(btn); ul.appendChild(li);
+        });
+        details.appendChild(ul);
+        details.addEventListener('toggle', ()=>{ if(details.open) detailsNodes.forEach(d=>{ if(d!==details) d.open=false; }); });
+        navSections.appendChild(details); detailsNodes.push(details);
+      });
+      const pagesBlock = document.createElement('div'); pagesBlock.className='nav-section';
+      [['About','about'], ['CV','cv'], ['Contact','contact']].forEach(([label,id])=>{
+        const a = document.createElement('a'); a.className='nav-section__summary'; a.textContent=label; a.href = '#/page/'+id; a.setAttribute('data-page', id); pagesBlock.appendChild(a);
+      });
+      navSections.appendChild(pagesBlock);
+      updateCurrentMarker();
+    }
+
+    function updateCurrentMarker(){
+      document.querySelectorAll('[aria-current="true"]').forEach(el=>el.removeAttribute('aria-current'));
+      const active = document.querySelector('.nav-item-btn[data-cat="'+CSS.escape(currentCat||'')+'\"][data-index="'+currentIndex+'\"]');
+      if(active) active.setAttribute('aria-current','true');
+      const m = location.hash.match(/^#\/page\/(about|cv|contact|index)$/i);
+      if(m){ const p = document.querySelector('a.nav-section__summary[data-page="'+m[1].toLowerCase()+'\"]'); if(p) p.setAttribute('aria-current','true'); }
+    }
+
+    function render(){
+      const list = DATA[currentCat]||[]; const item = list[currentIndex]; if(!item) return;
+      showGallery();
+      imgEl.style.opacity = 0.001; const onLoad = ()=>{ imgEl.style.transition='opacity .2s ease'; requestAnimationFrame(()=> imgEl.style.opacity=1); imgEl.removeEventListener('load', onLoad); };
+      imgEl.addEventListener('load', onLoad, {once:true});
+      imgEl.src = item.src||''; imgEl.alt=item.title||'Artwork'; captionEl.textContent = item.caption||item.title||'';
+      const slug = item.id || String(currentIndex); const hash = '#/'+encodeURIComponent(currentCat)+'/'+encodeURIComponent(slug);
+      if(location.hash !== hash) location.hash = hash;
+      updateCurrentMarker();
+      const nextItem = list[(currentIndex+1)%Math.max(list.length,1)]; if(nextItem && nextItem.src){ const pre = new Image(); pre.src = nextItem.src; }
+    }
+
+    function buildIndexPage(){
+      indexGridPage.innerHTML = '';
+      const list = DATA[currentCat] || [];
+      list.forEach((item, idx)=>{
+        const card = document.createElement('div'); card.className='index-card';
+        const img = document.createElement('img'); img.src=item.src||''; img.alt=item.title||'Artwork';
+        const label = document.createElement('div'); label.className='index-card__label'; label.textContent=item.title||'(Untitled)';
+        card.appendChild(img); card.appendChild(label);
+        card.addEventListener('click', ()=>{ select(currentCat, idx, true); window.scrollTo({top:0, behavior:'smooth'}); });
+        indexGridPage.appendChild(card);
+      });
+    }
+
+    function select(cat, index, closeOnMobile){
+      currentCat=cat; currentIndex=index; render(); if(closeOnMobile && window.matchMedia('(max-width:900px)').matches) toggleMenu(false);
+    }
+    function prev(){ const arr=DATA[currentCat]||[]; if(!arr.length) return; currentIndex=(currentIndex-1+arr.length)%arr.length; render(); }
+    function next(){ const arr=DATA[currentCat]||[]; if(!arr.length) return; currentIndex=(currentIndex+1)%arr.length; render(); }
+
+    document.getElementById('prev').addEventListener('click', prev);
+    document.getElementById('next').addEventListener('click', next);
+    document.getElementById('openIndex').addEventListener('click', ()=>{ location.hash = '#/page/index'; });
+
+    window.addEventListener('keydown', (e)=>{ if(e.key==='ArrowLeft') prev(); else if(e.key==='ArrowRight') next(); else if(e.key==='Escape') { closeLightbox(); toggleMenu(false); } else if(e.key.toLowerCase()==='i') location.hash='#/page/index'; });
+
+    function initFromHash(){
+      const h=location.hash;
+      let m=h.match(/^#\/page\/(about|cv|contact|index)$/i);
+      if(m){ if(m[1].toLowerCase()==='index') showIndexPage(); else showPage(m[1].toLowerCase()); return true; }
+      m=h.match(/^#\/(.+?)\/(.+)$/); if(!m) return false;
+      const cat=decodeURIComponent(m[1]); const slug=decodeURIComponent(m[2]); if(!DATA[cat]) return false;
+      const idx=(DATA[cat]||[]).findIndex(i=>i.id===slug); if(idx>=0){ currentCat=cat; currentIndex=idx; showGallery(); return true; }
+      return false;
+    }
+    window.addEventListener('hashchange', ()=>{ initFromHash(); render(); });
+
+    function toggleMenu(force){
+      const willOpen = typeof force==='boolean' ? force : !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open', willOpen);
+      document.querySelector('.hamburger').setAttribute('aria-expanded', String(willOpen));
+      const backdrop = document.getElementById('backdrop');
+      if(backdrop){ if(willOpen){ backdrop.classList.add('open'); backdrop.removeAttribute('hidden'); } else { backdrop.classList.remove('open'); backdrop.setAttribute('hidden',''); } }
+    }
+    document.querySelector('.hamburger').addEventListener('click', ()=> toggleMenu());
+
+    const lb=document.getElementById('lightbox'); const lbImg=document.getElementById('lightbox-img'); const lbClose=document.getElementById('lightbox-close');
+    let scale=1, originX=0, originY=0, isPanning=false, startX=0, startY=0;
+    function openLightbox(){ const g=imgEl; lbImg.src=g.currentSrc||g.src; scale=1; originX=0; originY=0; applyTransform(); lb.classList.add('open'); lb.setAttribute('aria-hidden','false'); }
+    function closeLightbox(){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); }
+    function applyTransform(){ lbImg.style.transform = 'translate('+originX+'px, '+originY+'px) scale('+scale+')'; }
+    lb.addEventListener('wheel', (e)=>{ e.preventDefault(); const d=Math.sign(e.deltaY)*-0.1; scale=Math.max(0.5, Math.min(5, scale+d)); applyTransform(); }, { passive:false });
+    lbImg.addEventListener('mousedown', (e)=>{ isPanning=true; startX=e.clientX-originX; startY=e.clientY-originY; lbImg.style.cursor='grabbing'; });
+    window.addEventListener('mouseup', ()=>{ isPanning=false; lbImg.style.cursor='grab'; });
+    window.addEventListener('mousemove', (e)=>{ if(!isPanning) return; originX=e.clientX-startX; originY=e.clientY-startY; applyTransform(); });
+    lb.addEventListener('click', (e)=>{ if(e.target===lb) closeLightbox(); });
+    lbClose.addEventListener('click', closeLightbox);
+    imgEl.addEventListener('click', openLightbox);
+
+    buildNav();
+    if(!initFromHash()){ if(currentCat && (DATA[currentCat]||[]).length) select(currentCat, 0, false); } else { render(); }
+  })();
+  </script>
+</body>
+</html>

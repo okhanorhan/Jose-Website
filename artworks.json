@@ -1,0 +1,35 @@
+{
+  "Painting": [
+    {
+      "id": "sample-painting-1",
+      "title": "Sample Painting 1",
+      "year": "2024",
+      "medium": "Oil on panel",
+      "dimensions": "20×20 cm",
+      "src": "assets/images/sample-painting-1.jpg",
+      "caption": "Sample Painting 1, 2024 • Oil on panel • 20×20 cm"
+    }
+  ],
+  "Drawing": [
+    {
+      "id": "sample-drawing-1",
+      "title": "Sample Drawing 1",
+      "year": "2023",
+      "medium": "Graphite on paper",
+      "dimensions": "21×29.7 cm",
+      "src": "assets/images/sample-drawing-1.jpg",
+      "caption": "Sample Drawing 1, 2023 • Graphite on paper • 21×29.7 cm"
+    }
+  ],
+  "Ceramics": [
+    {
+      "id": "sample-ceramic-1",
+      "title": "Sample Ceramic 1",
+      "year": "2022",
+      "medium": "Stoneware",
+      "dimensions": "15×15×15 cm",
+      "src": "assets/images/sample-ceramic-1.jpg",
+      "caption": "Sample Ceramic 1, 2022 • Stoneware • 15×15×15 cm"
+    }
+  ]
+}
