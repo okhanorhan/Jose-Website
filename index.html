@@ -42,14 +42,6 @@
         </div>
       </section>
 
-      <section id="page-cv" class="page" aria-labelledby="cv-title">
-        <h1 id="cv-title">Curriculum Vitae</h1>
-        <div class="prose">
-          <p>José Lara Menéndez josem.laramenendez@gmail.com Education: 2027 Master of Fine Arts, Painting and Drawing, Concordia University 2022 Bachelor in Fine Arts with Distinction, Painting and Drawing, Concordia University 2017 Diploma of Collegial Studies in Visual Arts, Dawson College Group Exhibition history: 2025 Fresh Paint / New Construction, Art Mûr, Montréal, QC 2025 Maureen X, Fonderie Darling, Montréal, QC 2024 Art Volt Collection Exhibition Launch, FOFA Gallery, Montréal, QC 2022 Friends of Friends, Hoy Gallery, Montréal, QC 2022 Ya Llegamos, Hoy Gallery, Montréal, QC 2022 Banquette, Afternoon Projects, Vancouver, BC 2022 Graduating Student Exhibition, FOFA Gallery, Montréal, QC 2021 ALMAS exhibit, Chimbites &amp; Plastique Famille, Montréal, QC 2021 Porthole, Somewhere Gallery, Montréal, QC 2020 HUMA-I-N, Rad Hourani, Montréal, QC 2020 VAV X FARR Unshelved, VAV Gallery, Concordia University, Montréal, QC 2018 Smelted, VAV Gallery, Concordia University, Montréal, QC Grants and Awards: 2025 SSHRC Canada Graduate Scholarship – Master’s (CGS-M) 2024 Dale and Nick Tedeschi Studio Scholarship 2024 Tom Hopkins Memorial Graduate Scholarship 2022 Canada Council for the Arts, Research and Creation Grant Collections: 2024 Art Volt Collection, Concordia University, Montréal, QC Commissions: 2022 Mural commission for Project 10, Montréal, QC 2020 Editorial illustration collaboration with Jorge Vallecillos for Deem Journal, Los Angeles, CA Mentorship: 2022 Art Volt Mentorship Program, Montréal, QC Publications: 2023 Trains Magazine, Issue 06, San Francisco, CA 2021 Murmurs, Queer Print Club, Montréal, QC 2020 Personal Delights: A Series of Favorite Artists, curated by Katherine Parthimos 2019 Sangre, Montréal, QC Residencies: 2018 Céline Bureau, Montréal,QC Work experience: 2025 TA Teacher assistant, Holly King, Concordia University</p>
-          <p>2024 (-) Art Volt, Montréal, QC Web &amp; Communications assistant 2024 Project 10 X Musée d’Art Contemporain de Montréal, Montréal, QC Support in silkscreen printing workshops and the installation of a group exhibition 2022-23 Machinerie des arts, Montréal, QC Assistant to the director 2022 Project 10, Montréal, QC Creation of a Narrative Drawing Workshop (Teen &amp; Young Adults)</p>
-        </div>
-      </section>
-
       <section id="page-contact" class="page" aria-labelledby="contact-title">
         <h1 id="contact-title">Contact</h1>
         <div class="prose">
@@ -288,127 +280,39 @@
   (function(){
     const YEAR = new Date().getFullYear(); document.getElementById('year').textContent = YEAR;
 
-    // Data: inline first, then fallback to artworks.json
+    // Data
     let RAW = {};
-    try {
-      const t = document.getElementById('artworks-data')?.textContent?.trim();
-      if (t && t !== '{}' && t !== '[]') RAW = JSON.parse(t);
-    } catch(e){}
-    async function ensureData(){
-      if (Object.keys(RAW).length) return RAW;
-      try { const r = await fetch('artworks.json', {cache:'no-store'}); if(r.ok) RAW = await r.json(); } catch(e){}
-      return RAW;
-    }
+    try { const t = document.getElementById('artworks-data')?.textContent?.trim(); if(t && t!=='{}' && t!=='[]') RAW = JSON.parse(t); } catch(e){}
+    async function ensureData(){ if(Object.keys(RAW).length) return RAW; try{const r=await fetch('artworks.json',{cache:'no-store'}); if(r.ok) RAW=await r.json();}catch(e){} return RAW; }
 
-    let currentCat = null, currentIndex = 0;
-    const sidebar = document.getElementById('sidebar');
-    const navSections = document.getElementById('nav-sections');
-    const imgEl = document.getElementById('image');
-    const captionEl = document.getElementById('caption');
-    const galleryEl = document.getElementById('gallery');
-    const indexPage = document.getElementById('page-index');
-    const indexGridPage = document.getElementById('indexGridPage');
-    const pageAbout = document.getElementById('page-about');
-    const pageCV = document.getElementById('page-cv');
-    const pageContact = document.getElementById('page-contact');
+    let currentCat=null, currentIndex=0;
+    const sidebar=document.getElementById('sidebar'), navSections=document.getElementById('nav-sections');
+    const imgEl=document.getElementById('image'), captionEl=document.getElementById('caption');
+    const galleryEl=document.getElementById('gallery'), indexPage=document.getElementById('page-index'), indexGridPage=document.getElementById('indexGridPage');
+    const pageAbout=document.getElementById('page-about'), pageContact=document.getElementById('page-contact');
 
-    function showGallery(){
-      galleryEl.style.display = '';
-      indexPage.classList.remove('active');
-      pageAbout.classList.remove('active');
-      pageCV.classList.remove('active');
-      pageContact.classList.remove('active');
-    }
-    function showPage(id){
-      galleryEl.style.display = 'none';
-      indexPage.classList.remove('active');
-      pageAbout.classList.toggle('active', id==='about');
-      pageCV.classList.toggle('active', id==='cv');
-      pageContact.classList.toggle('active', id==='contact');
-    }
-    function showIndexPage(){
-      galleryEl.style.display = 'none';
-      pageAbout.classList.remove('active'); pageCV.classList.remove('active'); pageContact.classList.remove('active');
-      indexPage.classList.add('active');
-      buildIndexPage(window.__DATA);
-    }
+    function showGallery(){ galleryEl.style.display=''; indexPage.classList.remove('active'); pageAbout.classList.remove('active'); pageContact.classList.remove('active'); }
+    function showPage(id){ galleryEl.style.display='none'; indexPage.classList.remove('active'); pageAbout.classList.toggle('active', id==='about'); pageContact.classList.toggle('active', id==='contact'); }
+    function showIndexPage(){ galleryEl.style.display='none'; pageAbout.classList.remove('active'); pageContact.classList.remove('active'); indexPage.classList.add('active'); buildIndexPage(window.__DATA); }
 
-    function updateCurrentMarker(DATA){
-      document.querySelectorAll('[aria-current="true"]').forEach(el=>el.removeAttribute('aria-current'));
-      const active = document.querySelector('.nav-item-btn[data-cat="'+CSS.escape(currentCat||'')+'"][data-index="'+currentIndex+'"]');
-      if(active) active.setAttribute('aria-current','true');
-      const m = location.hash.match(/^#\/page\/(about|cv|contact|index)$/i);
-      if(m){ const p = document.querySelector('a.nav-section__summary[data-page="'+m[1].toLowerCase()+'"]'); if(p) p.setAttribute('aria-current','true'); }
-    }
-
-    function render(DATA){
-      const list = (DATA[currentCat]||[]); const item = list[currentIndex];
-      if(!item) return;
-      showGallery();
-      imgEl.style.opacity = 0.001;
-      const onLoad = ()=>{ imgEl.style.transition='opacity .2s ease'; requestAnimationFrame(()=> imgEl.style.opacity=1); imgEl.removeEventListener('load', onLoad); };
-      imgEl.addEventListener('load', onLoad, {once:true});
-      imgEl.src = item.src||''; imgEl.alt=item.title||'Artwork';
-      captionEl.textContent = item.caption || item.title || '';
-      const slug = item.id || String(currentIndex);
-      const hash = '#/'+encodeURIComponent(currentCat)+'/'+encodeURIComponent(slug);
-      if(location.hash !== hash) location.hash = hash;
-      updateCurrentMarker(DATA);
-      const nextItem = list[(currentIndex+1)%Math.max(list.length,1)];
-      if(nextItem && nextItem.src){ const pre = new Image(); pre.src = nextItem.src; }
-    }
-
-    function buildIndexPage(DATA){
-      indexGridPage.innerHTML = '';
-      const list = DATA[currentCat] || [];
-      list.forEach((item, idx)=>{
-        const card = document.createElement('div'); card.className='index-card';
-        const img = document.createElement('img'); img.src=item.src||''; img.alt=item.title||'Artwork';
-        const label = document.createElement('div'); label.className='index-card__label'; label.textContent=item.title||'(Untitled)';
-        card.appendChild(img); card.appendChild(label);
-        card.addEventListener('click', ()=>{ select(DATA, currentCat, idx, true); window.scrollTo({top:0, behavior:'smooth'}); });
-        indexGridPage.appendChild(card);
-      });
-    }
-
-    function select(DATA, cat, index, closeOnMobile){
-      currentCat = cat; currentIndex = index; render(DATA);
-      if(closeOnMobile && window.matchMedia('(max-width:900px)').matches) toggleMenu(false);
-    }
+    function updateCurrentMarker(DATA){ document.querySelectorAll('[aria-current="true"]').forEach(el=>el.removeAttribute('aria-current')); const active=document.querySelector('.nav-item-btn[data-cat="'+CSS.escape(currentCat||'')+'"][data-index="'+currentIndex+'"]'); if(active) active.setAttribute('aria-current','true'); const m=location.hash.match(/^#\/page\/(about|contact|index)$/i); if(m){ const p=document.querySelector('a.nav-section__summary[data-page="'+m[1].toLowerCase()+'"]'); if(p) p.setAttribute('aria-current','true'); } }
+    function render(DATA){ const list=(DATA[currentCat]||[]); const item=list[currentIndex]; if(!item) return; showGallery(); imgEl.style.opacity=0.001; const onLoad=()=>{ imgEl.style.transition='opacity .2s ease'; requestAnimationFrame(()=> imgEl.style.opacity=1); imgEl.removeEventListener('load',onLoad); }; imgEl.addEventListener('load', onLoad, {once:true}); imgEl.src=item.src||''; imgEl.alt=item.title||'Artwork'; captionEl.textContent=item.caption||item.title||''; const slug=item.id||String(currentIndex); const hash='#/'+encodeURIComponent(currentCat)+'/'+encodeURIComponent(slug); if(location.hash!==hash) location.hash=hash; updateCurrentMarker(DATA); const nextItem=list[(currentIndex+1)%Math.max(list.length,1)]; if(nextItem && nextItem.src){ const pre=new Image(); pre.src=nextItem.src; } }
+    function buildIndexPage(DATA){ indexGridPage.innerHTML=''; const list=DATA[currentCat]||[]; list.forEach((item,idx)=>{ const card=document.createElement('div'); card.className='index-card'; const img=document.createElement('img'); img.src=item.src||''; img.alt=item.title||'Artwork'; const label=document.createElement('div'); label.className='index-card__label'; label.textContent=item.title||'(Untitled)'; card.appendChild(img); card.appendChild(label); card.addEventListener('click', ()=>{ select(DATA, currentCat, idx, true); window.scrollTo({top:0, behavior:'smooth'}); }); indexGridPage.appendChild(card); }); }
+    function select(DATA, cat, index, closeOnMobile){ currentCat=cat; currentIndex=index; render(DATA); if(closeOnMobile && window.matchMedia('(max-width:900px)').matches) toggleMenu(false); }
     function prev(DATA){ const arr=(DATA[currentCat]||[]); if(!arr.length) return; currentIndex=(currentIndex-1+arr.length)%arr.length; render(DATA); }
     function next(DATA){ const arr=(DATA[currentCat]||[]); if(!arr.length) return; currentIndex=(currentIndex+1)%arr.length; render(DATA); }
-
     document.getElementById('prev').addEventListener('click', ()=>prev(window.__DATA));
     document.getElementById('next').addEventListener('click', ()=>next(window.__DATA));
-    document.getElementById('openIndex').addEventListener('click', ()=>{ location.hash = '#/page/index'; });
+    document.getElementById('openIndex').addEventListener('click', ()=>{ location.hash='#/page/index'; });
     window.addEventListener('keydown', (e)=>{ if(e.key==='ArrowLeft') prev(window.__DATA); else if(e.key==='ArrowRight') next(window.__DATA); else if(e.key==='Escape') { closeLightbox(); toggleMenu(false); } else if(e.key.toLowerCase()==='i') location.hash='#/page/index'; });
-
-    function initFromHash(DATA){
-      const h = location.hash;
-      let m = h.match(/^#\/page\/(about|cv|contact|index)$/i);
-      if(m){ if(m[1].toLowerCase()==='index') showIndexPage(); else showPage(m[1].toLowerCase()); return true; }
-      m = h.match(/^#\/(.+?)\/(.+)$/); if(!m) return false;
-      const cat = decodeURIComponent(m[1]); const slug = decodeURIComponent(m[2]); if(!DATA[cat]) return false;
-      const idx = (DATA[cat]||[]).findIndex(i=>i.id===slug); if(idx>=0){ currentCat=cat; currentIndex=idx; showGallery(); return true; }
-      return false;
-    }
+    function initFromHash(DATA){ const h=location.hash; let m=h.match(/^#\/page\/(about|contact|index)$/i); if(m){ if(m[1].toLowerCase()==='index') showIndexPage(); else showPage(m[1].toLowerCase()); return true; } m=h.match(/^#\/(.+?)\/(.+)$/); if(!m) return false; const cat=decodeURIComponent(m[1]); const slug=decodeURIComponent(m[2]); if(!DATA[cat]) return false; const idx=(DATA[cat]||[]).findIndex(i=>i.id===slug); if(idx>=0){ currentCat=cat; currentIndex=idx; showGallery(); return true; } return false; }
     window.addEventListener('hashchange', ()=>{ initFromHash(window.__DATA); render(window.__DATA); });
-
-    function toggleMenu(force){
-      const willOpen = typeof force==='boolean' ? force : !sidebar.classList.contains('open');
-      sidebar.classList.toggle('open', willOpen);
-      document.querySelector('.hamburger').setAttribute('aria-expanded', String(willOpen));
-      const backdrop = document.getElementById('backdrop');
-      if(backdrop){ if(willOpen){ backdrop.classList.add('open'); backdrop.removeAttribute('hidden'); } else { backdrop.classList.remove('open'); backdrop.setAttribute('hidden',''); } }
-    }
+    function toggleMenu(force){ const willOpen=typeof force==='boolean'? force: !sidebar.classList.contains('open'); sidebar.classList.toggle('open', willOpen); document.querySelector('.hamburger').setAttribute('aria-expanded', String(willOpen)); const backdrop=document.getElementById('backdrop'); if(backdrop){ if(willOpen){ backdrop.classList.add('open'); backdrop.removeAttribute('hidden'); } else { backdrop.classList.remove('open'); backdrop.setAttribute('hidden',''); } } }
     document.querySelector('.hamburger').addEventListener('click', ()=> toggleMenu());
-
-    // Lightbox
-    const lb=document.getElementById('lightbox'); const lbImg=document.getElementById('lightbox-img'); const lbClose=document.getElementById('lightbox-close');
-    let scale=1, originX=0, originY=0, isPanning=false, startX=0, startY=0;
+    const lb=document.getElementById('lightbox'); const lbImg=document.getElementById('lightbox-img'); const lbClose=document.getElementById('lightbox-close'); let scale=1, originX=0, originY=0, isPanning=false, startX=0, startY=0;
     function openLightbox(){ const g=imgEl; lbImg.src=g.currentSrc||g.src; scale=1; originX=0; originY=0; applyTransform(); lb.classList.add('open'); lb.setAttribute('aria-hidden','false'); }
     function closeLightbox(){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); }
-    function applyTransform(){ lbImg.style.transform = 'translate('+originX+'px, '+originY+'px) scale('+scale+')'; }
+    function applyTransform(){ lbImg.style.transform='translate('+originX+'px, '+originY+'px) scale('+scale+')'; }
     lb.addEventListener('wheel', (e)=>{ e.preventDefault(); const d=Math.sign(e.deltaY)*-0.1; scale=Math.max(0.5, Math.min(5, scale+d)); applyTransform(); }, { passive:false });
     lbImg.addEventListener('mousedown', (e)=>{ isPanning=true; startX=e.clientX-originX; startY=e.clientY-originY; lbImg.style.cursor='grabbing'; });
     window.addEventListener('mouseup', ()=>{ isPanning=false; lbImg.style.cursor='grab'; });
@@ -416,40 +320,7 @@
     lb.addEventListener('click', (e)=>{ if(e.target===lb) closeLightbox(); });
     lbClose.addEventListener('click', closeLightbox);
     imgEl.addEventListener('click', openLightbox);
-
-    (async function(){
-      const RAW_DATA = await ensureData();
-      const DATA = Object.fromEntries(Object.entries(RAW_DATA||{}).filter(([k]) => !/^all(\s*works?)?$/i.test(k||'')));
-      window.__DATA = DATA;
-      currentCat = Object.keys(DATA)[0] || null;
-
-      // Build nav
-      navSections.innerHTML = '';
-      const detailsNodes = [];
-      Object.keys(DATA).forEach(cat=>{
-        const details = document.createElement('details'); details.className='nav-section'; if(cat===currentCat) details.open = true;
-        const summary = document.createElement('summary'); summary.className='nav-section__summary'; summary.textContent = cat; details.appendChild(summary);
-        const ul = document.createElement('ul'); ul.className='nav-section__list';
-        (DATA[cat]||[]).forEach((item, idx)=>{
-          const li = document.createElement('li');
-          const btn = document.createElement('button'); btn.className='nav-item-btn'; btn.type='button';
-          btn.textContent = item.title || '(Untitled)'; btn.setAttribute('data-cat',cat); btn.setAttribute('data-index', String(idx));
-          btn.addEventListener('click', ()=> select(DATA, cat, idx, true)); li.appendChild(btn); ul.appendChild(li);
-        });
-        details.appendChild(ul);
-        details.addEventListener('toggle', ()=>{ if(details.open) detailsNodes.forEach(d=>{ if(d!==details) d.open=false; }); });
-        navSections.appendChild(details); detailsNodes.push(details);
-      });
-      const pagesBlock = document.createElement('div'); pagesBlock.className='nav-section';
-      [['About','about'], ['CV','cv'], ['Contact','contact']].forEach(([label,id])=>{
-        const a = document.createElement('a'); a.className='nav-section__summary'; a.textContent=label; a.href = '#/page/'+id; a.setAttribute('data-page', id); pagesBlock.appendChild(a);
-      });
-      navSections.appendChild(pagesBlock);
-
-      // First render
-      if(!initFromHash(DATA)){ if(currentCat && (DATA[currentCat]||[]).length) select(DATA, currentCat, 0, false); } else { render(DATA); }
-    })();
-  })();
+    (async function(){ const RAW_DATA=await ensureData(); const DATA=Object.fromEntries(Object.entries(RAW_DATA||{}).filter(([k])=>!/^all(\s*works?)?$/i.test(k||''))); window.__DATA=DATA; currentCat=Object.keys(DATA)[0]||null; navSections.innerHTML=''; const detailsNodes=[]; Object.keys(DATA).forEach(cat=>{ const details=document.createElement('details'); details.className='nav-section'; if(cat===currentCat) details.open=true; const summary=document.createElement('summary'); summary.className='nav-section__summary'; summary.textContent=cat; details.appendChild(summary); const ul=document.createElement('ul'); ul.className='nav-section__list'; (DATA[cat]||[]).forEach((item,idx)=>{ const li=document.createElement('li'); const btn=document.createElement('button'); btn.className='nav-item-btn'; btn.type='button'; btn.textContent=item.title||'(Untitled)'; btn.setAttribute('data-cat',cat); btn.setAttribute('data-index', String(idx)); btn.addEventListener('click', ()=> select(DATA, cat, idx, true)); li.appendChild(btn); ul.appendChild(li); }); details.appendChild(ul); details.addEventListener('toggle', ()=>{ if(details.open) detailsNodes.forEach(d=>{ if(d!==details) d.open=false; }); }); navSections.appendChild(details); detailsNodes.push(details); }); const pagesBlock=document.createElement('div'); pagesBlock.className='nav-section'; const aAbout=document.createElement('a'); aAbout.className='nav-section__summary'; aAbout.textContent='About'; aAbout.href='#/page/about'; aAbout.setAttribute('data-page','about'); pagesBlock.appendChild(aAbout); const aCV=document.createElement('a'); aCV.className='nav-section__summary'; aCV.textContent='CV'; aCV.href='assets/docs/cv.pdf'; aCV.setAttribute('target','_blank'); aCV.setAttribute('rel','noopener'); aCV.setAttribute('download',''); pagesBlock.appendChild(aCV); const aContact=document.createElement('a'); aContact.className='nav-section__summary'; aContact.textContent='Contact'; aContact.href='#/page/contact'; aContact.setAttribute('data-page','contact'); pagesBlock.appendChild(aContact); navSections.appendChild(pagesBlock); if(!initFromHash(DATA)){ if(currentCat && (DATA[currentCat]||[]).length) select(DATA, currentCat, 0, false); } else { render(DATA); } })(); } )();
   </script>
 </body>
 </html>
