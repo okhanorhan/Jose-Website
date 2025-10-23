@@ -6,7 +6,7 @@
       "year": "2025",
       "medium": "Coloring pencils and graphite on paper",
       "dimensions": "11 x 14 inches",
-      "src": "assets/images/2025-Inquiring-about-the-right-mistakes.jpg"
+      "src": "assets/artworks/2025-Inquiring-about-the-right-mistakes.jpg"
     },
     {
       "id": "growing-pains",
@@ -14,7 +14,7 @@
       "year": "2025",
       "medium": "Drawing on paper",
       "dimensions": "11 x 14 inches",
-      "src": "assets/images/2025_Growingpains.jpg"
+      "src": "assets/artworks/2025_Growingpains.jpg"
     },
     {
       "id": "dreaming-of-sinkholes",
@@ -22,7 +22,7 @@
       "year": "2024",
       "medium": "Drawing on bristleboard",
       "dimensions": "11 x 14 inches",
-      "src": "assets/images/2024-Dreaming-of-sinkholes.jpg"
+      "src": "assets/artworks/2024-Dreaming-of-sinkholes.jpg"
     },
     {
       "id": "untitled-drawing",
@@ -30,7 +30,7 @@
       "year": "2022",
       "medium": "Drawing on paper",
       "dimensions": "9 x 12 inches",
-      "src": "assets/images/2022-Untitled.png"
+      "src": "assets/artworks/2022-Untitled.png"
     },
     {
       "id": "calendar-buddy",
@@ -38,7 +38,7 @@
       "year": "2020",
       "medium": "Drawing on bristleboard",
       "dimensions": "9 x 12 inches",
-      "src": "assets/images/2020-Calendar-buddy.jpg"
+      "src": "assets/artworks/2020-Calendar-buddy.jpg"
     }
   ],
   "Painting": [
@@ -48,7 +48,7 @@
       "year": "2025",
       "medium": "Oil on canvas",
       "dimensions": "36 x 30 inches",
-      "src": "assets/images/2025_Through-a-collar.jpg"
+      "src": "assets/artworks/2025_Through-a-collar.jpg"
     },
     {
       "id": "event-horizon",
@@ -56,7 +56,7 @@
       "year": "2025",
       "medium": "Oil on canvas",
       "dimensions": "30 x 24 inches",
-      "src": "assets/images/2025_Event-Horizon.jpg"
+      "src": "assets/artworks/2025_Event-Horizon.jpg"
     },
     {
       "id": "sounds-of-the-early-morning",
@@ -64,7 +64,7 @@
       "year": "2025",
       "medium": "Oil on canvas",
       "dimensions": "22 x 28 inches",
-      "src": "assets/images/2025_Sounds-of-the-early-morning.jpg"
+      "src": "assets/artworks/2025_Sounds-of-the-early-morning.jpg"
     },
     {
       "id": "glass-futures",
@@ -72,7 +72,7 @@
       "year": "2025",
       "medium": "Oil and wax on canvas",
       "dimensions": "24 x 24 inches",
-      "src": "assets/images/2025_Glass-Futures.jpg"
+      "src": "assets/artworks/2025_Glass-Futures.jpg"
     },
     {
       "id": "vortex-at-ease",
@@ -80,7 +80,7 @@
       "year": "2025",
       "medium": "Oil on canvas",
       "dimensions": "3 x 4 feet or 36 x 48 inches",
-      "src": "assets/images/2025_Vortex-at-ease.jpg"
+      "src": "assets/artworks/2025_Vortex-at-ease.jpg"
     },
     {
       "id": "passive-psychokinesis",
@@ -88,7 +88,7 @@
       "year": "2024",
       "medium": "Oil on canvas",
       "dimensions": "4 x 4 feet or 48 x 48 inches",
-      "src": "assets/images/2025_Passive-psychokinesis.jpg"
+      "src": "assets/artworks/2025_Passive-psychokinesis.jpg"
     },
     {
       "id": "sarah-s-crime",
@@ -96,7 +96,7 @@
       "year": "2024",
       "medium": "Oil on canvas",
       "dimensions": "20 x 30 inches",
-      "src": "assets/images/2024-Sarahs-crime.jpg"
+      "src": "assets/artworks/2024-Sarahs-crime.jpg"
     },
     {
       "id": "gate-for-a-cryptic-welcome",
@@ -104,7 +104,7 @@
       "year": "2024",
       "medium": "Oil on canvas",
       "dimensions": "3 x 3 feet or 36 x 36 inches",
-      "src": "assets/images/2024_Gate-for-a-cryptic-welcome.jpg"
+      "src": "assets/artworks/2024_Gate-for-a-cryptic-welcome.jpg"
     },
     {
       "id": "green-study",
@@ -112,7 +112,7 @@
       "year": "2024",
       "medium": "Oil on canvas",
       "dimensions": "12 x 12 inches",
-      "src": "assets/images/2024_Green-study.jpg"
+      "src": "assets/artworks/2024_Green-study.jpg"
     },
     {
       "id": "ponders-and-wonders",
@@ -120,7 +120,7 @@
       "year": "2023",
       "medium": "Oil on canvas",
       "dimensions": "20 x 24 inches",
-      "src": "assets/images/2023_Ponders-and-wonders.jpg"
+      "src": "assets/artworks/2023_Ponders-and-wonders.jpg"
     },
     {
       "id": "waiting-for-nothing",
@@ -128,7 +128,7 @@
       "year": "2023",
       "medium": "Oil on canvas",
       "dimensions": "12 x 14 inches",
-      "src": "assets/images/2023_Waiting-for-nothing.png"
+      "src": "assets/artworks/2023_Waiting-for-nothing.png"
     },
     {
       "id": "skewphoria",
@@ -136,7 +136,7 @@
       "year": "2023",
       "medium": "Oil on canvas",
       "dimensions": "24 x 30 inches",
-      "src": "assets/images/2023_skewphoria.jpg"
+      "src": "assets/artworks/2023_skewphoria.jpg"
     },
     {
       "id": "nitpicker",
@@ -144,7 +144,7 @@
       "year": "2019",
       "medium": "Oil on linen",
       "dimensions": "24 x 30 inches",
-      "src": "assets/images/2019_Nitpicker.jpg"
+      "src": "assets/artworks/2019_Nitpicker.jpg"
     },
     {
       "id": "friendly-reminder",
@@ -152,7 +152,7 @@
       "year": "2018",
       "medium": "Oil on canvas",
       "dimensions": "40 x 60 inches",
-      "src": "assets/images/2018-Friendly-reminder.jpg"
+      "src": "assets/artworks/2018-Friendly-reminder.jpg"
     },
     {
       "id": "a-boy-and-their-favourite-meal",
@@ -160,7 +160,7 @@
       "year": "2018",
       "medium": "Oil on canvas",
       "dimensions": "48 x 48 inches",
-      "src": "assets/images/2018_A-boy-and-their-favorite-meal.jpg"
+      "src": "assets/artworks/2018_A-boy-and-their-favorite-meal.jpg"
     },
     {
       "id": "beer-boy",
@@ -168,7 +168,7 @@
       "year": "2018",
       "medium": "Oil on canvas",
       "dimensions": "18 x 24 inches",
-      "src": "assets/images/2018_Beer-boy.jpg"
+      "src": "assets/artworks/2018_Beer-boy.jpg"
     }
   ],
   "Ceramics": [
@@ -178,7 +178,7 @@
       "year": "2022",
       "medium": "Terracotta ceramics",
       "dimensions": "13.5 x 8.5 x 9 inches",
-      "src": "assets/images/2022-Coyboy-1.jpg"
+      "src": "assets/artworks/2022-Coyboy-1.jpg"
     },
     {
       "id": "coy-boy-2",
@@ -186,7 +186,7 @@
       "year": "2022",
       "medium": "Terracotta ceramics",
       "dimensions": "13.5 x 8.5 x 9 inches",
-      "src": "assets/images/2022-Coyboy-2.jpg"
+      "src": "assets/artworks/2022-Coyboy-2.jpg"
     }
   ]
 }
