@@ -96,7 +96,7 @@
 
 /* Responsive Categories */
 	.show {
-	  display: block;
+	  display: flex;
 	}
 
 
