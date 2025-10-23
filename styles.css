@@ -2,24 +2,38 @@ body {
   background-color: #eeeeee;
 } 
  
-.main {
+.main_container {
   padding: 20px;
   display: flex;
   flex-direction: row;
   gap: 20px;
+  align-items: flex-start;
+  
 }
 
 .sidebar {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 16px;
   width: 250px;
   height: 100%;
   background-color: #eeeeee;
 }
 
+.logo_stack {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 218px;
+}
+
+.logo_line {
+  display: none;
+}
+
 .sidebar a {
-  display: block;
   color: black;
-  padding: 16px;
   text-decoration: none;
 }
  
@@ -33,8 +47,12 @@ body {
 
 
 @media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
+
+  .logo_line {
+    display: block;
+  }
+
+  .logo_stack {
+    display: none;
   }
 }
