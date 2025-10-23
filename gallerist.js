@@ -40,14 +40,14 @@ function toggleDropdown(event) {
   const dropdownContent = event.target.nextElementSibling;
   
   // Check if the clicked dropdown is already open
-  const isAlreadyOpen = dropdownContent.classList.contains('show');
+  const isAlreadyOpen = dropdownContent.classList.contains('ol');
 
   // Close all other dropdowns
   closeAllDropdowns();
 
   // If the clicked dropdown was not already open, toggle it open
   if (!isAlreadyOpen) {
-    dropdownContent.classList.toggle('show');
+    dropdownContent.classList.toggle('ol');
   }
 }
 
