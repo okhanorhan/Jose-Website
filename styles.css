@@ -91,7 +91,17 @@
 	margin: 0;
 	}
 
-	/* Responsive Design */
+/* Responsive Categories */
+	.dropdown-content {
+	  display: none;
+	}
+	
+	.show {
+	  display: block;
+	}
+
+
+/* Responsive Design */
 	@media screen and (max-width: 400px) {
 
 	.logo_line {
