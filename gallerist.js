@@ -30,7 +30,7 @@ fetch('artworks.json')
   });
 
 function closeAllDropdowns() {
-  const dropdowns = document.querySelectorAll(".dropdown-content");
+  const dropdowns = document.querySelectorAll(".Category");
   for (let i = 0; i < dropdowns.length; i++) {
     dropdowns[i].classList.remove('show');
   }
