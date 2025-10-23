@@ -24,17 +24,25 @@
 	width: 250px;
 	height: 100%;
 	background-color: #eeeeee;
+	cursor: pointer;
 	}
 
 /* Logo Styles */
 	.logo_stack {
 	padding-top: 16px;
 	padding-bottom: 16px;
-	width: 218px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	width: 100%;
 	}
 
 	.logo_line {
 	display: none;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	width: 100%;
 	}
 
 /* Navigation Styles */
@@ -43,7 +51,8 @@
 	padding-bottom: 16px;
 	padding-left: 0px;
 	padding-right: 0px;
-	margin: 0;
+	margin-top: 16px;
+	margin-bottom: 16px;
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
@@ -102,11 +111,15 @@
 /* Responsive Design */
 	@media screen and (max-width: 400px) {
 
-	.logo_line {
-	display: block;
-	}
+		.logo_line {
+		display: block;
+		}
 
-	.logo_stack {
-	display: none;
-	}
+		.logo_stack {
+		display: none;
+		}
+
+		.main_container {
+		flex-direction: column;
+		}
 	}

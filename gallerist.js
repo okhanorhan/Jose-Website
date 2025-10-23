@@ -30,30 +30,23 @@ fetch('artworks.json')
   });
 
 function closeAllDropdowns() {
-  const dropdowns = document.querySelectorAll(".ol");
-  for (let i = 0; i < dropdowns.length; i++) {
-    dropdowns[i].classList.remove('show');
-  }
+  document.querySelectorAll("ol.show").forEach((el) => el.classList.remove("show"));
 }
 
 function toggleDropdown(event) {
-  const dropdownContent = event.target.nextElementSibling;
-  
-  // Check if the clicked dropdown is already open
-  const isAlreadyOpen = dropdownContent.classList.contains('ol');
-
-  // Close all other dropdowns
+  if (event && typeof event.preventDefault === "function") event.preventDefault();
+  const trigger = event?.currentTarget || event?.target;
+  if (!trigger) return;
+  const dropdownContent = trigger.nextElementSibling;
+  if (!dropdownContent) return;
+  const wasOpen = dropdownContent.classList.contains("show");
   closeAllDropdowns();
-
-  // If the clicked dropdown was not already open, toggle it open
-  if (!isAlreadyOpen) {
-    dropdownContent.classList.toggle('ol');
-  }
+  if (!wasOpen) dropdownContent.classList.add("show");
 }
 
-// Add an event listener to the window to close dropdowns when clicking outside
-window.addEventListener('click', function(event) {
-  if (!event.target.matches('.ol')) {
-    closeAllDropdowns();
-  }
+window.addEventListener("click", function (event) {
+  if (event.target.closest(".NavList")) return;
+  closeAllDropdowns();
 });
+
+window.toggleDropdown = toggleDropdown;
