@@ -30,7 +30,7 @@ fetch('artworks.json')
   });
 
 function closeAllDropdowns() {
-  const dropdowns = document.querySelectorAll(".Category");
+  const dropdowns = document.querySelectorAll(".ol");
   for (let i = 0; i < dropdowns.length; i++) {
     dropdowns[i].classList.remove('show');
   }
@@ -53,7 +53,7 @@ function toggleDropdown(event) {
 
 // Add an event listener to the window to close dropdowns when clicking outside
 window.addEventListener('click', function(event) {
-  if (!event.target.matches('.dropdown-toggle')) {
+  if (!event.target.matches('.ol')) {
     closeAllDropdowns();
   }
 });
