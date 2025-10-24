@@ -14,16 +14,20 @@
 	margin: 0;
 	}
 
+/* Content Styles */
+	.contentArea {
+	padding: 32px 0 0 0;
+	max-width: 560px;
+	}
+
 /* Sidebar Styles */
 	.sidebar {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	align-items: flex-start;
 	padding: 16px;
 	width: 250px;
 	background-color: #eeeeee;
-	flex-grow: 1;
 	height: 90vh;
 	}
 
@@ -59,6 +63,8 @@
 	.Category {
 	font-size: 16px;
 	font-weight:600;
+	text-decoration: none;
+	color: black;
 	}
 
 	.Category.active {
@@ -99,8 +105,23 @@
 	margin: 0;
 	}
 
+/* Typeface Styles */
+	h1 {
+	font-size: 18px;
+	font-weight: 700;
+	}
+
+	p {
+	font-family: Source Serif Pro;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.5em;
+	}
+
+
 /* Copyright Styles */
 	.copyright {
+	font-family: Source Sans Pro;
 	font-size: 10px;
 	font-weight: 300;
 	color: #333333;
@@ -132,10 +153,6 @@
 		margin: 0px;
 		padding: 16px;
 		gap: 24px;
-	}
-
-		* {
-		margin: 0px;
 		}
 
 		.logo_line {

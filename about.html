@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>José Lara Menéndez</title>
+  <link rel="stylesheet" href="/styles.css">
+  <meta property="og:image" content="https://github.com/okhanorhan/Jose-Website/blob/main/assets/icons/social.jpg?raw=true">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="498">
+  <meta property="og:image:height" content="627">
+  <meta property="og:title" content="José Lara Menéndez">
+  <meta property="og:description" content="Personal website of artist José Lara Menéndez.">
+  <meta property="og:url" content="http://www.joselaramenendez.com/">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main_container">
+  <div class="sidebar">
+    <a href="/index.html" class="logo_stack"><img src="/assets/logos/logo_stack.svg" alt="Jose Lara Menendez signature in handwritten style"/></a>
+    <a href="/index.html" class="logo_line"><img src="/assets/logos/logo_line.svg" alt="Jose Lara Menendez signature in handwritten style"/></a>
+    <nav>
+      <div class="NavList">
+        <!-- Painting -->
+        <a class="Category" onclick="toggleDropdown(event)">Painting</a>
+        <ol id="painting-list" class="CatItem"></ol>
+        <!-- Drawing -->
+        <a class="Category" onclick="toggleDropdown(event)">Drawing</a>
+        <ol id="drawing-list" class="CatItem"></ol>
+        <!-- Ceramics -->
+        <a class="Category" onclick="toggleDropdown(event)">Ceramics</a>
+        <ol id="ceramics-list" class="CatItem"></ol>
+        <!-- Other -->
+        <a class="Category" href="/about.html">About</a>
+        <a class="Category" href="/assets/docs/cv.pdf">CV</a>
+        <a class="Category" href="/contact.html">Contact</a>
+      </div>
+    </nav>
+    <p class="copyright">©José Lara Menéndez</p>
+  </div>
+  <div class="contentArea">
+
+    <h1>Artist Bio</h1>
+
+    <p>José Lara Menéndez is a visual figurative artist who holds a Bachelors of Fine Arts from
+        Concordia University (2022) and is now continuing their studies as an MFA candidate there. The
+        artist creates surrealist dreamlike scenes featuring cartoon figures navigating otherworldly
+        spaces. Menéndez is the recipient of the SSHRC Master's program scholarship (2025), the Dale
+        and Nick Tedeschi Studio Scholarship (2024), the Tom Hopkins Memorial Graduate Scholarship
+        (2024), and the Research and Creation grant from the Canada Council for the Arts (2022). In
+        2022, they participated in the Art Volt mentorship program. Menéndez has exhibited their work
+        across Montreal and Canada, and in 2024, joined the Art Volt Collection.</p>
+
+    <h1>Artist Statement </h1>
+
+    <p>My practice delves into themes of identity, gender, alienation, and the dissonance of time. I
+        explore these ideas through dreamlike compositions of ambiguous, liminal spaces to evoke a
+        sense of eeriness and emotional states of transition, disorientation, and excavation.</p>
+
+    <p>The figures I depict are caught between fictional characters and self-portraiture, suspended
+        between past and future selves. They often appear in moments of pause or dislocation. Are they
+        escaping, entering, regressing, or moving forward? The scenes, lit from unclear sources, omit a
+        disjointed atmosphere and suggest alternate realities and paranormal states. Lingering hints of
+        auras and vibrational light sources appear in my figures, insinuating an indistinguishable
+        experience and a supra-sensorial expansion of the body to the outside world.</p>
+
+    <p>Drawing on my interests in queer theory, particularly Jack Halberstam's writing on queer failure
+        and queer time, my work considers nonlinear queer temporality through elements reminiscent of
+        structures of time such as surreally integrated calendars and depictions of spacetime. Through
+        this, I strive to challenge colonial perspectives on gender and self-worth, the relentless pace of
+        productivity culture, and the “hurry sickness” that distorts our sense of worth and presence,
+        which often clashes with how I move through the world as a trans and autistic person of
+        Guatemalan and Salvadoran heritage. </p>
+
+    <p>I consider my works as portals into internal landscapes simultaneously shaped by gender
+        dysphoria and gender euphoria. The combination of socio-cultural references and domestic
+        elements in my compositions becomes a visual cue for psychological tensions. These
+        references converge to reflect the environmental and social constraints I navigate under
+        capitalism. These contradictions surface as ambiguous expressions, distorted environments,
+        and temporal dissonance. </p>
+
+    <p>Ultimately, my work carves out spaces of self-affirmation and different modes of being. Through
+        the otherworldly, I aim to find a shared humanity of my personal experiences and to offer
+        viewers glimpses into states of indeterminacy, resilience, and transformation.</p>
+  </div>
+  <p class="copyrightBottom">©José Lara Menéndez</p>
+  </div>
+  <script src="gallerist.js"></script>
+</body>
+</html>
