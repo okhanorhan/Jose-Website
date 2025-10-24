@@ -40,10 +40,30 @@
         <a class="Category" href="/contact.html">Contact</a>
       </div>
     </nav>
-    <p class="copyright">©José Lara Menéndez</p>
+    <p class="copyright">© José Lara Menéndez</p>
   </div>
-  <h1>Currently rebuilding my website. Please return soon.</h1>
-  <p class="copyrightBottom">©José Lara Menéndez</p>
+  <div class="content">
+    <div class="galleryContainer">
+
+    <div id="artwork" class="artwork">
+      <img src="/assets/artworks/2022-Coyboy-1.jpg" class="artworkDisplay"/>
+    </div>
+
+    <div class="galleryController">
+      </div class="galleryControls">
+        <button id="prevBtn" class="prevBtn" onclick="prevBtn()">Previous</button>
+        <button id="nextBtn" class="nextBtn" onclick="nextBtn()">Next</button>
+      </div>
+      <!-- .galleryContainer . .galleryInfo .  -->
+      <div class="galleryInfo">
+        <h1 id="title" class="artworkTitle">Title of the Artwork</h1>
+        <p id="size" class="artworkDetails">24" x 36"</p>
+        <p id="medium" class="artworkDetails">Oil on Canvas</p>
+      </div>
+    </div>
+
+  <p class="copyrightBottom">© José Lara Menéndez</p>
+
   </div>
   <script src="gallerist.js"></script>
 </body>
