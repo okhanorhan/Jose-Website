@@ -452,3 +452,15 @@
 	}
 
 }
+
+/* Buttons polish + accessibility */
+.galleryControls { gap: 12px }
+.prevBtn, .nextBtn {
+}
+.prevBtn:hover, .nextBtn:hover { }
+.prevBtn:active, .nextBtn:active { transform: translateY(1px) }
+.prevBtn:focus-visible, .nextBtn:focus-visible { }
+
+@media (prefers-reduced-motion: reduce){
+  * { animation: none !important; transition: none !important; }
+}
