@@ -162,6 +162,50 @@
 	display: flex;
 	}
 
+/* -------------- */
+/* Gallery Styles */
+/* -------------- */
+
+	.galleryContainer {
+	
+	}
+
+	.galleryInfo {
+	
+	}
+
+	.galleryController {
+	
+	}
+
+	.galleryControls {
+	
+	}
+
+	.prevBtn {
+	
+	}
+
+	.nextBtn {
+	
+	}
+
+	.artworkTitle {
+	
+	}
+
+	.artworkDetails {
+	
+	}
+
+	.artwork {
+	
+	}
+
+	.artworkDisplay {
+	
+	}
+
 /* ------------------------------------- */
 /* ------- ↑↑↑    Desktop    ↑↑↑ ------- */
 /* ------------------------------------- */
@@ -254,5 +298,45 @@
 	text-align: center;
 	width: 100%;
 	padding: 8px 0 12px;
+	}
+
+	.galleryContainer {
+	
+	}
+
+	.galleryInfo {
+	
+	}
+
+	.galleryController {
+	
+	}
+
+	.galleryControls {
+	
+	}
+
+	.prevBtn {
+	
+	}
+
+	.nextBtn {
+	
+	}
+
+	.artworkTitle {
+	
+	}
+
+	.artworkDetails {
+	
+	}
+
+	.artwork {
+	
+	}
+
+	.artworkDisplay {
+	
 	}
 }
