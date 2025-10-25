@@ -52,6 +52,12 @@
 	width: 100%;
 	}
 
+	.logo_stack :hover {
+	transition: ease 0.15s;
+	scale: .992;
+	opacity: 0.92;
+	}
+
 	.logo_line {
 	display: none;
 	}
@@ -79,15 +85,21 @@
 	font-size: 16px;
 	font-weight:600;
 	text-decoration: none;
-	color: black;
+	color: #222222;
+	transition: ease 0.15s;
 	}
 
 	.Category.active {
 	font-weight:700;
+	transition: ease 0.15s;
 	}
 
 	.Category:hover:not(.active) {
-	font-weight:700;
+	font-weight:600;
+	transition: ease 0.15s;
+	letter-spacing: 0.25px;
+	padding-left: 0.5px;
+	color: #000000;
 	}
 
 /* ----------- */
@@ -96,18 +108,25 @@
 	.CatItem {
 	font-size: 14px;
 	font-weight:400;
+	color: #333333;
+	transition: ease 0.15s;
 	}
 
 	.CatItem a.active {
 	font-weight:600;
+	transition: ease 0.15s;
 	}
 
 	.CatItem a:hover:not(.active) {
-	font-weight:600;
+	font-weight:400;
+	transition: ease 0.15s;
+	letter-spacing: 0.05px;
+	padding-left: 1px;
+	color: #000000;
 	}
 
 	.CatItem a {
-	color: black;
+	color: #333333;
 	text-decoration: none;
 	}
 
@@ -203,7 +222,8 @@
 	}
 
 	.artworkDisplay {
-	
+	width: auto;
+	height: 72dvh;
 	}
 
 /* ------------------------------------- */
@@ -216,20 +236,63 @@
 
 @media screen and (max-width: 720px) {
 
+/* -------------- */
+/* Gallery Styles */
+/* -------------- */
+		.galleryContainer {
+		
+		}
+
+		.galleryInfo {
+		
+		}
+
+		.galleryController {
+		
+		}
+
+		.galleryControls {
+		
+		}
+
+		.prevBtn {
+		
+		}
+
+		.nextBtn {
+		
+		}
+
+		.artworkTitle {
+		
+		}
+
+		.artworkDetails {
+		
+		}
+
+		.artwork {
+		
+		}
+
+		.artworkDisplay {
+		width: 100%;
+		height:auto;
+		}
 
 /* --------------------- */
 /* Main Container Styles */
 /* --------------------- */	
-	.main_container {
-	display: flex;
-	flex-direction: column;
-	min-height: 90dvh;	
-	gap: 0px;
-	align-items: flex-start;
-	margin: 0px;
-	padding: 16px;
-	gap: 24px;
-	}
+		.main_container {
+		display: flex;
+		flex-direction: column;
+		min-height: 90dvh;	
+		gap: 0px;
+		align-items: flex-start;
+		margin: 0px;
+		padding: 16px;
+		gap: 24px;
+		}
 
 /* ----------- */
 /* Logo Styles */
@@ -300,43 +363,4 @@
 	padding: 8px 0 12px;
 	}
 
-	.galleryContainer {
-	
-	}
-
-	.galleryInfo {
-	
-	}
-
-	.galleryController {
-	
-	}
-
-	.galleryControls {
-	
-	}
-
-	.prevBtn {
-	
-	}
-
-	.nextBtn {
-	
-	}
-
-	.artworkTitle {
-	
-	}
-
-	.artworkDetails {
-	
-	}
-
-	.artwork {
-	
-	}
-
-	.artworkDisplay {
-	
-	}
 }
