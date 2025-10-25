@@ -5,6 +5,10 @@
 	background-color: #eeeeee;
 	font-family: Source Sans Pro, sans-serif;
 	} 
+
+	* {
+	cursor: url('assets/icons/thickPointer.svg') 2 2, auto; 
+	}
  
 /* --------------------- */
 /* Main Container Styles */
@@ -74,7 +78,6 @@
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
-	cursor: pointer;
 	}
 
 /* --------------- */
@@ -203,10 +206,11 @@
 	}
 
 	.prevBtn {
-
+	border: none;
 	}
 
 	.nextBtn {
+	border: none;
 	}
 
 	.artworkTitle {
