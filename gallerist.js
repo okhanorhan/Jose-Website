@@ -1,5 +1,11 @@
-fetch('artworks.json')
-  .then(r => { if (!r.ok) throw new Error('Failed to load artworks.json'); return r.json(); })
+// Resolve artworks.json relative to this script (works on GitHub Pages + custom domains)
+const here = document.currentScript?.src ? new URL(document.currentScript.src) : new URL(window.location.href);
+const jsonURL = new URL('artworks.json', here);
+
+console.log('Loading artworks from:', jsonURL.toString());
+
+fetch(jsonURL.toString(), { cache: 'no-store' })
+  .then(r => { if (!r.ok) throw new Error('Failed to load ' + jsonURL); return r.json(); })
   .then(data => init(data))
   .catch(err => console.error('Error loading artworks:', err));
 
